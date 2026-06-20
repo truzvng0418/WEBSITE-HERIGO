@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HERIGO - Bản đồ di sản tương tác</title>
+
+  <!-- Leaflet: bản đồ miễn phí, chạy được trên localhost/GitHub Pages -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-row">
+       <img class="brand-logo-image" src="assets/herigo-logo.jpg" onerror="this.onerror=null;this.src='assets/herigo-logo.svg';" alt="Herigo logo" />
+        <div>
+          <h1>HERIGO</h1>
+          <p>Bản đồ di sản tương tác</p>
+        </div>
+        <button class="icon-btn mobile-close" id="closeSidebar" aria-label="Đóng thanh bên">×</button>
+      </div>
+
+      <div class="search-box">
+        <span class="search-icon">⌕</span>
+        <input id="searchInput" type="search" placeholder="Tìm địa điểm, di sản, bảo tàng..." autocomplete="off" />
+        <button id="clearSearch" class="clear-btn" aria-label="Xóa tìm kiếm">×</button>
+      </div>
+
+      <div class="chips" id="categoryChips"></div>
+
+      <div class="quick-actions">
+      </div>
+
+      <div class="panel-section">
+        <div class="section-title">
+          <span>Kết quả</span>
+          <small id="resultCount">0 địa điểm</small>
+        </div>
+        <div class="places-list" id="placesList"></div>
+      </div>
+    </aside>
+
+    <main class="map-area">
+      <header class="mobile-topbar">
+        <button class="hamburger" id="openSidebar" aria-label="Mở thanh bên">☰</button>
+        <div class="mobile-title">
+          <strong>HERIGO</strong>
+          <span>Bản đồ di sản tương tác</span>
+        </div>
+      </header>
+
+      <div id="map"></div>
+      <nav class="feature-nav" id="featureNav" aria-label="Tính năng HERIGO">
+        <button class="feature-tab active" data-feature="map">Bản đồ</button>
+        <button class="feature-tab" data-feature="ai">AI Guide</button>
+        <button class="feature-tab" data-feature="tickets">Vé</button>
+        <button class="feature-tab" data-feature="guides">Hướng dẫn viên</button>
+        <button class="feature-tab" data-feature="vr">VR 360</button>
+        <button class="feature-tab" data-feature="match">Match</button>
+      </nav>
+
+
+      <div class="map-float top">
+        <button id="btnLocateMap" title="Định vị">⌖</button>
+        <button id="btnResetMap" title="Vừa khung">⤢</button>
+      </div>
+
+      <section class="feature-panel" id="featurePanel" aria-live="polite">
+        <div class="feature-panel-head">
+          <div>
+            <span class="feature-kicker" id="featureKicker">HERIGO</span>
+            <h2 id="featureTitle">Tính năng</h2>
+          </div>
+          <button class="feature-close" id="featureClose" aria-label="Đóng tính năng">×</button>
+        </div>
+        <div class="feature-panel-body" id="featurePanelBody"></div>
+      </section>
+
+      <section class="place-drawer" id="placeDrawer" aria-live="polite">
+        <button class="drawer-close" id="closeDrawer" aria-label="Đóng thông tin">×</button>
+        <div class="drawer-image" id="drawerImage">
+          <div class="image-loading">Đang tải ảnh thật...</div>
+        </div>
+        <div class="drawer-content">
+          <div class="drawer-kicker" id="drawerCategory">Di sản</div>
+          <h2 id="drawerTitle">Chọn một địa điểm</h2>
+          <p class="drawer-meta" id="drawerMeta">Bấm vào marker hoặc danh sách bên trái để xem chi tiết.</p>
+          <p id="drawerDescription"></p>
+
+          <div class="drawer-actions">
+            <button class="primary" id="btnDirections">↗ Chỉ đường</button>
+            <button id="btnVR">◉ Xem 360°</button>
+            <button id="btnBook">🎟 Đặt vé</button>
+            <button id="btnZoom">＋ Phóng tới</button>
+          </div>
+
+          <div class="mini-info">
+            <div>
+              <span>Giờ mở cửa</span>
+              <strong id="drawerHours">Đang cập nhật</strong>
+            </div>
+            <div>
+              <span>Giá vé</span>
+              <strong id="drawerPrice">Đang cập nhật</strong>
+            </div>
+            <div>
+              <span>Gợi ý</span>
+              <strong id="drawerTip">Tham quan 60 phút</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div class="modal" id="modalBox" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modalClose" aria-label="Đóng">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <template id="ticketTemplate">
+    <div class="ticket-modal">
+      <h2>Đặt vé tham quan</h2>
+      <p class="muted">Chọn loại vé cho địa điểm đang xem.</p>
+      <div class="ticket-card">
+        <div>
+          <strong id="ticketPlaceName"></strong>
+          <span id="ticketPriceText"></span>
+        </div>
+        <div class="qty">
+          <button id="qtyMinus">−</button>
+          <span id="ticketQty">1</span>
+          <button id="qtyPlus">+</button>
+        </div>
+      </div>
+      <label class="form-label">
+        Ngày tham quan
+        <input type="date" id="visitDate" />
+      </label>
+      <label class="form-label">
+        Họ tên
+        <input type="text" placeholder="Nhập tên của bạn" />
+      </label>
+      <label class="form-label">
+        Số điện thoại
+        <input type="tel" placeholder="Ví dụ: 09xxxxxxxx" />
+      </label>
+      <div class="ticket-total">
+        <span>Tổng tiền</span>
+        <strong id="ticketTotal"></strong>
+      </div>
+      <button class="primary full" id="confirmTicket">Xác nhận đặt vé</button>
+    </div>
+  </template>
+
+  <template id="vrTemplate">
+    <div class="vr-modal">
+      <h2 id="vrTitle">VR 360° Khám phá không gian ảo</h2>
+      <div class="vr-select-row">
+        <select class="feature-select" id="vrModalPlaceSelect"></select>
+      </div>
+      <div class="vr-frame-wrap">
+        <iframe
+          id="vrFrame"
+          title="Google Maps preview"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <div class="vr-caption-box">
+        <strong id="vrCaptionTitle"></strong>
+        <p id="vrCaptionText"></p>
+      </div>
+      <a id="openStreetView" class="primary link-btn" target="_blank" rel="noopener">Mở Street View toàn màn hình</a>
+    </div>
+  </template>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
