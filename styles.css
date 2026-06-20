@@ -2325,3 +2325,64 @@ body {
 .brand-mark {
   display: none !important;
 }
+
+/* =========================
+   Bigger sidebar brand block
+   Logo + HERIGO + subtitle stay side by side
+   ========================= */
+
+.brand-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  padding: 4px 0 8px !important;
+}
+
+.brand-logo-image {
+  width: 62px !important;
+  height: 62px !important;
+  min-width: 62px !important;
+  min-height: 62px !important;
+  border-radius: 18px !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.brand-row h1 {
+  margin: 0 !important;
+  font-size: 28px !important;
+  line-height: 1.05 !important;
+  letter-spacing: .08em !important;
+  font-weight: 900 !important;
+}
+
+.brand-row p {
+  margin: 6px 0 0 !important;
+  font-size: 15px !important;
+  line-height: 1.25 !important;
+  font-weight: 500 !important;
+}
+
+@media (max-width: 920px) {
+  .brand-logo-image {
+    width: 54px !important;
+    height: 54px !important;
+    min-width: 54px !important;
+    min-height: 54px !important;
+  }
+
+  .brand-row h1 {
+    font-size: 24px !important;
+  }
+
+  .brand-row p {
+    font-size: 13px !important;
+  }
+}
