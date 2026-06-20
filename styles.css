@@ -207,10 +207,10 @@ button {
 }
 
 .brand-row {
-  display: flex;
+  gap: 14px;
   align-items: center;
-  gap: 12px;
 }
+
 
 .brand-mark {
   width: 42px;
@@ -225,15 +225,13 @@ button {
 }
 
 .brand-row h1 {
-  margin: 0;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1.1;
 }
 
 .brand-row p {
-  margin: 3px 0 0;
-  color: var(--muted);
-  font-size: 13px;
+  font-size: 14px;
+  margin-top: 4px;
 }
 
 .search-box {
@@ -1911,14 +1909,12 @@ body {
    ========================= */
 
 .brand-logo-image {
-  width: 42px;
-  height: 42px;
-  border-radius: 14px;
+  width: 54px;
+  height: 54px;
+  min-width: 54px;
+  min-height: 54px;
+  border-radius: 16px;
   object-fit: cover;
-  display: block;
-  box-shadow: 0 12px 26px rgba(181, 114, 34, .22);
-  background: #fffaf2;
-  border: 1px solid rgba(198, 170, 132, .38);
 }
 
 .brand-mark {
