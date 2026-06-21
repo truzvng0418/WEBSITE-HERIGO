@@ -322,8 +322,10 @@ const filterDefinitions = [
   { label: "UNESCO", match: (place) => place.tags.includes("UNESCO") },
   { label: "Lịch sử", match: (place) => place.category === "Lịch sử" || place.tags.includes("Lịch sử") },
   { label: "Biểu tượng", match: (place) => place.category === "Biểu tượng" || place.tags.includes("Biểu tượng") },
-  { label: "Đền/miếu", match: (place) => place.category === "Đền/miếu" || place.tags.includes("Tâm linh") },
-  { label: "Chùa", match: (place) => place.category === "Chùa" || place.tags.includes("Phật giáo") },
+  { 
+    label: "Đền/ Chùa", 
+    match: (place) => place.category === "Chùa" || place.category === "Đền/miếu" || place.tags.includes("Phật giáo") || place.tags.includes("Tâm linh") 
+  },
   { label: "Bảo tàng", match: (place) => place.category === "Bảo tàng" || place.tags.includes("Bảo tàng") },
   { label: "Miễn phí", match: (place) => place.price === 0 || place.tags.includes("Miễn phí") },
   { label: "Có vé", match: (place) => place.price > 0 || place.tags.includes("Có vé") },
