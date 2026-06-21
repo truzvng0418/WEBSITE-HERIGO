@@ -736,17 +736,19 @@ function fitVisiblePlaces() {
 
 function getStreetViewEmbedUrl(place) {
   const vr = getVRViewpoint(place);
-  return `https://www.google.com/maps?q=${vr.lat},${vr.lng}&layer=c&cbll=${vr.lat},${vr.lng}&cbp=11,${vr.heading},${vr.pitch},0,0&output=svembed`;
+  return `https://www.google.com/maps?layer=c&cbll=${vr.lat},${vr.lng}&cbp=11,${vr.heading},${vr.pitch},0,0&output=svembed`;
 }
 
 function getStreetViewFullUrl(place) {
   const vr = getVRViewpoint(place);
-  return `https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${vr.lat},${vr.lng}&heading=${vr.heading}&pitch=${vr.pitch}`;
+  // Đường dẫn mở tab toàn màn hình sang trang Google Maps
+  return `https://www.google.com/maps?layer=c&cbll=${vr.lat},${vr.lng}&cbp=11,${vr.heading},${vr.pitch},0,0`;
 }
 
 function openDirections() {
   if (!state.selectedPlace) return showToast("Hãy chọn một địa điểm trước.");
   const { lat, lng } = state.selectedPlace;
+  // Đường dẫn điều hướng chỉ đường chuẩn
   const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&travelmode=driving`;
   window.open(url, "_blank", "noopener");
 }
