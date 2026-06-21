@@ -1539,7 +1539,7 @@ function renderTickets() {
 
 function renderGuides() {
   // 1. Thay đổi tên các mục lọc trực quan theo ảnh minh họa của bạn
-  const filters = ["Tất cả hướng dẫn viên", "đang hoạt động", "hdv chuyên nghiệp", "Giá tốt", "hdv Tại điểm"];
+  const filters = ["Tất cả hướng dẫn viên", "đang hoạt động", "HDV chuyên nghiệp", "Giá tốt", "HDV tại điểm"];
   
   const filtered = guides.filter((guide) => {
     if (featureState.guideFilter === "Tất cả hướng dẫn viên") return true;
