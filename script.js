@@ -1788,6 +1788,8 @@ const experiences = [
   { id: "exp-3", name: "Tự làm sản phẩm gốm - Làng gốm Bát tràng", price: 80000, desc: "Trở thành nghệ nhân gốm thực thụ, tự tay nhào nặn và tạo hình sản phẩm trên bàn xoay truyền thống." },
   { id: "exp-4", name: "Workshop sơn mài - Hạ Thái", price: 250000, desc: "Tìm hiểu nghệ thuật sơn mài truyền thống và tự tay trang trí một tác phẩm lưu niệm mang về." },
   { id: "exp-5", name: "Tour Đêm nhà tù Hỏa lò", price: 399000, desc: "Hành trình tâm linh đầy xúc động, tái hiện chân thực tinh thần bất khuất của các chiến sĩ yêu nước." }
+  { id: "exp-6", name: "Workshop Tự tay làm quạt giấy - Làng quạt Chàng Sơn", price: 70000, desc: "Lắng nghe nghệ nhân chia sẻ, tự tay tạo hình, dán nan tre và vẽ họa tiết nghệ thuật lên chiếc quạt giấy dore truyền thống." },
+  { id: "exp-7", name: "Trải nghiệm Nhuộm tơ tằm thủ công - Làng lụa Vạn Phúc", price: 150000, desc: "Tham gia vào quy trình nấu sợi, quay tơ và tự tay nhuộm màu tự nhiên cho một tấm lụa nhỏ mang đậm dấu ấn cá nhân." }
 ];
 
 function renderExperiences() {
