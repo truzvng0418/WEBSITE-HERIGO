@@ -1539,16 +1539,16 @@ function renderTickets() {
 
 function renderGuides() {
   // 1. Thay đổi tên các mục lọc trực quan theo ảnh minh họa của bạn
-  const filters = ["Tất cả hướng dẫn viên", "đang hoạt động", "HDV chuyên nghiệp", "Giá tốt", "HDV tại điểm"];
+  const filters = ["Tất cả hướng dẫn viên", "Đang hoạt động", "HDV chuyên nghiệp", "Giá tốt", "HDV tại điểm"];
   
   const filtered = guides.filter((guide) => {
     if (featureState.guideFilter === "Tất cả hướng dẫn viên") return true;
     
     // Ánh xạ logic lọc chuẩn xác dựa trên tên nhãn mới
-    if (featureState.guideFilter === "đang hoạt động") return guide.status === "Đang rảnh";
-    if (featureState.guideFilter === "hdv chuyên nghiệp") return guide.level === "Chuyên gia cao cấp";
+    if (featureState.guideFilter === "Đang hoạt động") return guide.status === "Đang rảnh";
+    if (featureState.guideFilter === "HDV chuyên nghiệp") return guide.level === "Chuyên gia cao cấp";
     if (featureState.guideFilter === "Giá tốt") return guide.level === "Giá tốt";
-    if (featureState.guideFilter === "hdv Tại điểm") {
+    if (featureState.guideFilter === "HDV tại điểm") {
       // Ưu tiên các HDV có kỹ năng dẫn cố định tại các di tích lõi
       return guide.skills.includes("Hoàng thành") || guide.skills.includes("Văn Miếu") || guide.skills.includes("Bảo tàng");
     }
