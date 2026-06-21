@@ -1805,7 +1805,8 @@ function renderExperiences() {
               <p style="margin: 0; font-size: 13px; color: #6f5848; line-height: 1.45;">${exp.desc}</p>
               <div style="margin-top: 8px;">
                 <span class="pill" style="background: #dfe8dc; color: #27735f; font-weight: 800;">⚡ Đặt ngay</span>
-                <span class="pill" style="font-weight: 800;">💰 ${currency(place.price)}</span>
+                <!-- Sửa lỗi: Đổi từ place.price thành exp.price để hiển thị chuẩn xác giá tiền -->
+                <span class="pill" style="font-weight: 800;">💰 ${currency(exp.price)}</span>
               </div>
             </div>
             <button class="feature-button" data-book-exp="${exp.id}" style="padding: 0 14px; min-height: 36px; font-size: 13px; flex-shrink: 0;">
