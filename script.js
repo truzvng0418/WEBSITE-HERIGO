@@ -102,7 +102,7 @@ const places = [
     tip: "75 phút",
     wikiTitle: "Nhà_tù_Hỏa_Lò",
     tags: ["Di sản nổi bật", "Lịch sử", "Trưng bày", "Audio guide", "Có vé"],
-    description: "Di tích lịch sử nổi bật, tái hiện nhiều câu chuyện về Hà Nội trong thời kỳ cận hiện đại."
+    description: "Di tích lịch sử nổi bật, tái hiện many câu chuyện về Hà Nội trong thời kỳ cận hiện đại."
   },
   {
     id: "lang-bac",
@@ -119,506 +119,223 @@ const places = [
     tags: ["Di sản nổi bật", "Ba Đình", "Lịch sử", "Trang nghiêm", "Miễn phí"],
     description: "Công trình trọng điểm tại Quảng trường Ba Đình, phù hợp kết hợp tham quan Phủ Chủ tịch và Chùa Một Cột."
   },
-
   {
-    "id": "chua-tran-quoc",
-    "name": "Chùa Trấn Quốc",
-    "category": "Chùa",
-    "address": "Đường Thanh Niên, Tây Hồ, Hà Nội",
-    "lat": 21.047933,
-    "lng": 105.836676,
-    "rating": 4.5,
-    "hours": "07:30 - 18:00",
-    "price": 0,
-    "tip": "45 phút",
-    "wikiTitle": "Chùa_Trấn_Quốc",
-    "tags": [
-      "Di sản nổi bật",
-      "Chùa",
-      "Phật giáo",
-      "Tâm linh",
-      "Check-in",
-      "Miễn phí",
-      "Gần Hồ Tây"
-    ],
-    "description": "Ngôi chùa cổ nổi tiếng bên Hồ Tây, có không gian thanh tịnh và tháp đỏ đặc trưng."
+    id: "chua-tran-quoc",
+    name: "Chùa Trấn Quốc",
+    category: "Chùa",
+    address: "Đường Thanh Niên, Tây Hồ, Hà Nội",
+    lat: 21.047933,
+    lng: 105.836676,
+    rating: 4.5,
+    hours: "07:30 - 18:00",
+    price: 0,
+    tip: "45 phút",
+    wikiTitle: "Chùa_Trấn_Quốc",
+    tags: ["Di sản nổi bật", "Chùa", "Phật giáo", "Tâm linh", "Check-in", "Miễn phí", "Gần Hồ Tây"],
+    description: "Ngôi chùa cổ nổi tiếng bên Hồ Tây, có không gian thanh tịnh và tháp đỏ đặc trưng."
   },
   {
-    "id": "phu-tay-ho",
-    "name": "Phủ Tây Hồ",
-    "category": "Đền/miếu",
-    "address": "52 Đặng Thai Mai, Tây Hồ, Hà Nội",
-    "lat": 21.058902,
-    "lng": 105.826665,
-    "rating": 4.5,
-    "hours": "06:00 - 20:00",
-    "price": 0,
-    "tip": "45 phút",
-    "wikiTitle": "Phủ_Tây_Hồ",
-    "tags": [
-      "Di sản nổi bật",
-      "Tâm linh",
-      "Đền/miếu",
-      "Miễn phí",
-      "Gần Hồ Tây"
-    ],
-    "description": "Điểm đến tâm linh nổi tiếng ở khu vực Hồ Tây, thu hút nhiều người dân và du khách vào các dịp lễ."
+    id: "phu-tay-ho",
+    name: "Phủ Tây Hồ",
+    category: "Đền/miếu",
+    address: "52 Đặng Thai Mai, Tây Hồ, Hà Nội",
+    lat: 21.058902,
+    lng: 105.826665,
+    rating: 4.5,
+    hours: "06:00 - 20:00",
+    price: 0,
+    tip: "45 phút",
+    wikiTitle: "Phủ_Tây_Hồ",
+    tags: ["Di sản nổi bật", "Tâm linh", "Đền/miếu", "Miễn phí", "Gần Hồ Tây"],
+    description: "Điểm đến tâm linh nổi tiếng ở khu vực Hồ Tây, thu hút nhiều người dân và du khách vào các dịp lễ."
   },
   {
-    "id": "den-quan-thanh",
-    "name": "Đền Quán Thánh",
-    "category": "Đền/miếu",
-    "address": "Đường Thanh Niên, Ba Đình, Hà Nội",
-    "lat": 21.043083,
-    "lng": 105.838094,
-    "rating": 4.4,
-    "hours": "08:00 - 17:00",
-    "price": 10000,
-    "tip": "35 phút",
-    "wikiTitle": "Đền_Quán_Thánh",
-    "tags": [
-      "Di sản nổi bật",
-      "Tâm linh",
-      "Đền/miếu",
-      "Lịch sử",
-      "Có vé",
-      "Gần Hồ Tây"
-    ],
-    "description": "Một trong Thăng Long tứ trấn, nổi bật với tượng Huyền Thiên Trấn Vũ và kiến trúc cổ."
+    id: "den-quan-thanh",
+    name: "Đền Quán Thánh",
+    category: "Đền/miếu",
+    address: "Đường Thanh Niên, Ba Đình, Hà Nội",
+    lat: 21.043083,
+    lng: 105.838094,
+    rating: 4.4,
+    hours: "08:00 - 17:00",
+    price: 10000,
+    tip: "35 phút",
+    wikiTitle: "Đền_Quán_Thánh",
+    tags: ["Di sản nổi bật", "Tâm linh", "Đền/miếu", "Lịch sử", "Có vé", "Gần Hồ Tây"],
+    description: "Một trong Thăng Long tứ trấn, nổi bật với tượng Huyền Thiên Trấn Vũ và kiến trúc cổ."
   },
   {
-    "id": "cot-co-ha-noi",
-    "name": "Cột cờ Hà Nội",
-    "category": "Lịch sử",
-    "address": "28A Điện Biên Phủ, Ba Đình, Hà Nội",
-    "lat": 21.031928,
-    "lng": 105.839754,
-    "rating": 4.5,
-    "hours": "08:00 - 17:00",
-    "price": 20000,
-    "tip": "30 phút",
-    "wikiTitle": "Cột_cờ_Hà_Nội",
-    "tags": [
-      "Di sản nổi bật",
-      "Lịch sử",
-      "Biểu tượng",
-      "Check-in",
-      "Có vé"
-    ],
-    "description": "Công trình biểu tượng của Hà Nội, nằm trong khuôn viên Bảo tàng Lịch sử Quân sự Việt Nam."
+    id: "cot-co-ha-noi",
+    name: "Cột cờ Hà Nội",
+    category: "Lịch sử",
+    address: "28A Điện Biên Phủ, Ba Đình, Hà Nội",
+    lat: 21.031928,
+    lng: 105.839754,
+    rating: 4.5,
+    hours: "08:00 - 17:00",
+    price: 20000,
+    tip: "30 phút",
+    wikiTitle: "Cột_cờ_Hà_Nội",
+    tags: ["Di sản nổi bật", "Lịch sử", "Biểu tượng", "Check-in", "Có vé"],
+    description: "Công trình biểu tượng của Hà Nội, nằm trong khuôn viên Bảo tàng Lịch sử Quân sự Việt Nam."
   },
   {
-    "id": "bao-tang-my-thuat",
-    "name": "Bảo tàng Mỹ thuật Việt Nam",
-    "category": "Bảo tàng",
-    "address": "66 Nguyễn Thái Học, Ba Đình, Hà Nội",
-    "lat": 21.030367,
-    "lng": 105.837204,
-    "rating": 4.4,
-    "hours": "08:30 - 17:00",
-    "price": 40000,
-    "tip": "90 phút",
-    "wikiTitle": "Bảo_tàng_Mỹ_thuật_Việt_Nam",
-    "tags": [
-      "Bảo tàng",
-      "Nghệ thuật",
-      "Văn hóa",
-      "Gia đình",
-      "Có vé"
-    ],
-    "description": "Không gian trưng bày mỹ thuật Việt Nam qua nhiều thời kỳ, phù hợp cho người yêu nghệ thuật."
+    id: "bao-tang-my-thuat",
+    name: "Bảo tàng Mỹ thuật Việt Nam",
+    category: "Bảo tàng",
+    address: "66 Nguyễn Thái Học, Ba Đình, Hà Nội",
+    lat: 21.030367,
+    lng: 105.837204,
+    rating: 4.4,
+    hours: "08:30 - 17:00",
+    price: 40000,
+    tip: "90 phút",
+    wikiTitle: "Bảo_tàng_Mỹ_thuật_Việt_Nam",
+    tags: ["Bảo tàng", "Nghệ thuật", "Văn hóa", "Gia đình", "Có vé"],
+    description: "Không gian trưng bày mỹ thuật Việt Nam qua many thời kỳ, phù hợp cho người yêu nghệ thuật."
   },
   {
-    "id": "nha-hat-lon",
-    "name": "Nhà hát Lớn Hà Nội",
-    "category": "Biểu tượng",
-    "address": "1 Tràng Tiền, Hoàn Kiếm, Hà Nội",
-    "lat": 21.024303,
-    "lng": 105.85708,
-    "rating": 4.6,
-    "hours": "Theo lịch sự kiện",
-    "price": 0,
-    "tip": "30 phút",
-    "wikiTitle": "Nhà_hát_Lớn_Hà_Nội",
-    "tags": [
-      "Di sản nổi bật",
-      "Biểu tượng",
-      "Kiến trúc Pháp",
-      "Check-in",
-      "Miễn phí",
-      "Gần Hồ Gươm"
-    ],
-    "description": "Công trình kiến trúc Pháp nổi bật ở trung tâm Hà Nội, thường được chọn làm điểm check-in."
+    id: "nha-hat-lon",
+    name: "Nhà hát Lớn Hà Nội",
+    category: "Biểu tượng",
+    address: "1 Tràng Tiền, Hoàn Kiếm, Hà Nội",
+    lat: 21.024303,
+    lng: 105.85708,
+    rating: 4.6,
+    hours: "Theo lịch sự kiện",
+    price: 0,
+    tip: "30 phút",
+    wikiTitle: "Nhà_hat_Lớn_Hà_Nội",
+    tags: ["Di sản nổi bật", "Biểu tượng", "Kiến trúc Pháp", "Check-in", "Miễn phí", "Gần Hồ Gươm"],
+    description: "Công trình kiến trúc Pháp nổi bật ở trung tâm Hà Nội, thường được chọn làm điểm check-in."
   },
   {
-    "id": "nha-tho-lon",
-    "name": "Nhà thờ Lớn Hà Nội",
-    "category": "Biểu tượng",
-    "address": "40 Nhà Chung, Hoàn Kiếm, Hà Nội",
-    "lat": 21.028748,
-    "lng": 105.848873,
-    "rating": 4.5,
-    "hours": "Theo giờ lễ",
-    "price": 0,
-    "tip": "30 phút",
-    "wikiTitle": "Nhà_thờ_Lớn_Hà_Nội",
-    "tags": [
-      "Di sản nổi bật",
-      "Biểu tượng",
-      "Kiến trúc Pháp",
-      "Check-in",
-      "Miễn phí",
-      "Gần Hồ Gươm"
-    ],
-    "description": "Nhà thờ cổ phong cách Gothic, là một trong những điểm nhận diện nổi bật của khu phố cổ Hà Nội."
+    id: "nha-tho-lon",
+    name: "Nhà thờ Lớn Hà Nội",
+    category: "Biểu tượng",
+    address: "40 Nhà Chung, Hoàn Kiếm, Hà Nội",
+    lat: 21.028748,
+    lng: 105.848873,
+    rating: 4.5,
+    hours: "Theo giờ lễ",
+    price: 0,
+    tip: "30 phút",
+    wikiTitle: "Nhà_thờ_Lớn_Hà_Nội",
+    tags: ["Di sản nổi bật", "Biểu tượng", "Kiến trúc Pháp", "Check-in", "Miễn phí", "Gần Hồ Gươm"],
+    description: "Nhà thờ cổ phong cách Gothic, là một trong những điểm nhận diện nổi bật của khu phố cổ Hà Nội."
   },
   {
-    "id": "o-quan-chuong",
-    "name": "Ô Quan Chưởng",
-    "category": "Lịch sử",
-    "address": "Phố Ô Quan Chưởng, Hoàn Kiếm, Hà Nội",
-    "lat": 21.035049,
-    "lng": 105.850975,
-    "rating": 4.2,
-    "hours": "Cả ngày",
-    "price": 0,
-    "tip": "20 phút",
-    "wikiTitle": "Ô_Quan_Chưởng",
-    "tags": [
-      "Di sản nổi bật",
-      "Lịch sử",
-      "Phố cổ",
-      "Check-in",
-      "Miễn phí",
-      "Gần Hồ Gươm"
-    ],
-    "description": "Cửa ô cổ còn lại của kinh thành Thăng Long, gắn với ký ức phố cổ Hà Nội."
+    id: "o-quan-chuong",
+    name: "Ô Quan Chưởng",
+    category: "Lịch sử",
+    address: "Phố Ô Quan Chưởng, Hoàn Kiếm, Hà Nội",
+    lat: 21.035049,
+    lng: 105.850975,
+    rating: 4.2,
+    hours: "Cả ngày",
+    price: 0,
+    tip: "20 phút",
+    wikiTitle: "Ô_Quan_Chưởng",
+    tags: ["Di sản nổi bật", "Lịch sử", "Phố cổ", "Check-in", "Miễn phí", "Gần Hồ Gươm"],
+    description: "Cửa ô cổ còn lại của kinh thành Thăng Long, gắn với ký ức phố cổ Hà Nội."
   },
   {
-    "id": "cho-dong-xuan",
-    "name": "Chợ Đồng Xuân",
-    "category": "Biểu tượng",
-    "address": "Đồng Xuân, Hoàn Kiếm, Hà Nội",
-    "lat": 21.038118,
-    "lng": 105.849785,
-    "rating": 4.1,
-    "hours": "06:00 - 18:00",
-    "price": 0,
-    "tip": "60 phút",
-    "wikiTitle": "Chợ_Đồng_Xuân",
-    "tags": [
-      "Biểu tượng",
-      "Phố cổ",
-      "Ẩm thực",
-      "Mua sắm",
-      "Miễn phí",
-      "Gần Hồ Gươm"
-    ],
-    "description": "Khu chợ lâu đời ở phố cổ, phù hợp khám phá nhịp sống địa phương và ẩm thực quanh chợ."
+    id: "cho-dong-xuan",
+    name: "Chợ Đồng Xuân",
+    category: "Biểu tượng",
+    address: "Đồng Xuân, Hoàn Kiếm, Hà Nội",
+    lat: 21.038118,
+    lng: 105.849785,
+    rating: 4.1,
+    hours: "06:00 - 18:00",
+    price: 0,
+    tip: "60 phút",
+    wikiTitle: "Chợ_Đồng_Xuân",
+    tags: ["Biểu tượng", "Phố cổ", "Ẩm thực", "Mua sắm", "Miễn phí", "Gần Hồ Gươm"],
+    description: "Khu chợ lâu đời ở phố cổ, phù hợp khám phá nhịp sống địa phương và ẩm thực quanh chợ."
   },
   {
-    "id": "cau-long-bien",
-    "name": "Cầu Long Biên",
-    "category": "Biểu tượng",
-    "address": "Cầu Long Biên, Hoàn Kiếm/Long Biên, Hà Nội",
-    "lat": 21.040001,
-    "lng": 105.856069,
-    "rating": 4.5,
-    "hours": "Cả ngày",
-    "price": 0,
-    "tip": "45 phút",
-    "wikiTitle": "Cầu_Long_Biên",
-    "tags": [
-      "Di sản nổi bật",
-      "Biểu tượng",
-      "Lịch sử",
-      "Check-in",
-      "Miễn phí"
-    ],
-    "description": "Cây cầu lịch sử bắc qua sông Hồng, được nhiều du khách yêu thích để ngắm cảnh và chụp ảnh."
+    id: "cau-long-bien",
+    name: "Cầu Long Biên",
+    category: "Biểu tượng",
+    address: "Cầu Long Biên, Hoàn Kiếm/Long Biên, Hà Nội",
+    lat: 21.040001,
+    lng: 105.856069,
+    rating: 4.5,
+    hours: "Cả ngày",
+    price: 0,
+    tip: "45 phút",
+    wikiTitle: "Cầu_Long_Biên",
+    tags: ["Di sản nổi bật", "Biểu tượng", "Lịch sử", "Check-in", "Miễn phí"],
+    description: "Cây cầu lịch sử bắc qua sông Hồng, được many du khách yêu thích để ngắm cảnh và chụp ảnh."
   },
   {
-    "id": "ho-tay",
-    "name": "Hồ Tây",
-    "category": "Biểu tượng",
-    "address": "Quận Tây Hồ, Hà Nội",
-    "lat": 21.054286,
-    "lng": 105.819454,
-    "rating": 4.6,
-    "hours": "Cả ngày",
-    "price": 0,
-    "tip": "90 phút",
-    "wikiTitle": "Hồ_Tây",
-    "tags": [
-      "Di sản nổi bật",
-      "Biểu tượng",
-      "Đi bộ",
-      "Ảnh đẹp",
-      "Miễn phí",
-      "Gần Hồ Tây",
-      "Check-in"
-    ],
-    "description": "Hồ nước lớn nổi tiếng của Hà Nội, phù hợp đi dạo, ngắm hoàng hôn và kết hợp các điểm tâm linh quanh hồ."
+    id: "ho-tay",
+    name: "Hồ Tây",
+    category: "Biểu tượng",
+    address: "Quận Tây Hồ, Hà Nội",
+    lat: 21.054286,
+    lng: 105.819454,
+    rating: 4.6,
+    hours: "Cả ngày",
+    price: 0,
+    tip: "90 phút",
+    wikiTitle: "Hồ_Tây",
+    tags: ["Di sản nổi bật", "Biểu tượng", "Đi bộ", "Ảnh đẹp", "Miễn phí", "Gần Hồ Tây", "Check-in"],
+    description: "Hồ nước lớn nổi tiếng của Hà Nội, phù hợp đi dạo, ngắm hoàng hôn và kết hợp các điểm tâm linh quanh hồ."
   },
   {
-    "id": "lang-co-duong-lam",
-    "name": "Làng cổ Đường Lâm",
-    "category": "Lịch sử",
-    "address": "Sơn Tây, Hà Nội",
-    "lat": 21.156478,
-    "lng": 105.474468,
-    "rating": 4.3,
-    "hours": "08:00 - 17:00",
-    "price": 20000,
-    "tip": "180 phút",
-    "wikiTitle": "Đường_Lâm",
-    "tags": [
-      "Di sản nổi bật",
-      "Làng cổ",
-      "Lịch sử",
-      "Kiến trúc",
-      "Có vé",
-      "Gia đình"
-    ],
-    "description": "Làng cổ nổi tiếng với nhà truyền thống đá ong, đình làng và không gian văn hóa Bắc Bộ."
+    id: "bao-tang-phu-nu",
+    name: "Bảo tàng Phụ nữ Việt Nam",
+    category: "Bảo tàng",
+    address: "36 Lý Thường Kiệt, Hoàn Kiếm, Hà Nội",
+    lat: 21.020803,
+    lng: 105.854764,
+    rating: 4.6,
+    hours: "08:00 - 17:00",
+    price: 40000,
+    tip: "90 phút",
+    wikiTitle: "Bảo_tàng_Phụ_nữ_Việt_Nam",
+    tags: ["Di sản nổi bật", "Bảo tàng", "Văn hóa", "Gia đình", "Có vé", "Gần Hồ Gươm"],
+    description: "Bảo tàng có many trưng bày sinh động về vai trò, đời sống và văn hóa của phụ nữ Việt Nam."
   },
   {
-    "id": "thanh-co-son-tay",
-    "name": "Thành cổ Sơn Tây",
-    "category": "Lịch sử",
-    "address": "Sơn Tây, Hà Nội",
-    "lat": 21.137335,
-    "lng": 105.504671,
-    "rating": 4.3,
-    "hours": "Cả ngày",
-    "price": 0,
-    "tip": "60 phút",
-    "wikiTitle": "Thành_cổ_Sơn_Tây",
-    "tags": [
-      "Di sản nổi bật",
-      "Lịch sử",
-      "Kiến trúc",
-      "Miễn phí",
-      "Gia đình"
-    ],
-    "description": "Tòa thành cổ xây bằng đá ong, là điểm đến tiêu biểu khi khám phá khu vực Sơn Tây."
-  },
-  {
-    "id": "chua-thay",
-    "name": "Chùa Thầy",
-    "category": "Chùa",
-    "address": "Sài Sơn, Quốc Oai, Hà Nội",
-    "lat": 20.970902,
-    "lng": 105.640344,
-    "rating": 4.5,
-    "hours": "07:00 - 18:00",
-    "price": 10000,
-    "tip": "90 phút",
-    "wikiTitle": "Chùa_Thầy",
-    "tags": [
-      "Di sản nổi bật",
-      "Chùa",
-      "Phật giáo",
-      "Tâm linh",
-      "Có vé",
-      "Gia đình"
-    ],
-    "description": "Danh thắng tâm linh gắn với núi Sài Sơn, cảnh quan hồ nước và kiến trúc chùa cổ."
-  },
-  {
-    "id": "chua-tay-phuong",
-    "name": "Chùa Tây Phương",
-    "category": "Chùa",
-    "address": "Thạch Xá, Thạch Thất, Hà Nội",
-    "lat": 20.994729,
-    "lng": 105.583458,
-    "rating": 4.6,
-    "hours": "07:00 - 18:00",
-    "price": 10000,
-    "tip": "75 phút",
-    "wikiTitle": "Chùa_Tây_Phương",
-    "tags": [
-      "Di sản nổi bật",
-      "Chùa",
-      "Phật giáo",
-      "Kiến trúc",
-      "Có vé",
-      "Gia đình"
-    ],
-    "description": "Ngôi chùa nổi tiếng với kiến trúc cổ và hệ thống tượng Phật có giá trị nghệ thuật cao."
-  },
-  {
-    "id": "den-soc",
-    "name": "Khu di tích Đền Sóc",
-    "category": "Đền/miếu",
-    "address": "Sóc Sơn, Hà Nội",
-    "lat": 21.257635,
-    "lng": 105.849607,
-    "rating": 4.5,
-    "hours": "07:00 - 18:00",
-    "price": 0,
-    "tip": "120 phút",
-    "wikiTitle": "Đền_Sóc",
-    "tags": [
-      "Di sản nổi bật",
-      "Tâm linh",
-      "Đền/miếu",
-      "Lịch sử",
-      "Miễn phí",
-      "Gia đình"
-    ],
-    "description": "Quần thể di tích gắn với truyền thuyết Thánh Gióng, có không gian núi rừng và các công trình tâm linh."
-  },
-  {
-    "id": "co-loa",
-    "name": "Thành Cổ Loa",
-    "category": "Lịch sử",
-    "address": "Cổ Loa, Đông Anh, Hà Nội",
-    "lat": 21.115316,
-    "lng": 105.872523,
-    "rating": 4.4,
-    "hours": "08:00 - 17:00",
-    "price": 10000,
-    "tip": "120 phút",
-    "wikiTitle": "Thành_Cổ_Loa",
-    "tags": [
-      "Di sản nổi bật",
-      "Lịch sử",
-      "Khảo cổ",
-      "Có vé",
-      "Gia đình"
-    ],
-    "description": "Di tích kinh đô cổ gắn với An Dương Vương, nỏ thần và hệ thống thành lũy đặc biệt."
-  },
-  {
-    "id": "den-hai-ba-trung",
-    "name": "Đền Hai Bà Trưng",
-    "category": "Đền/miếu",
-    "address": "Mê Linh, Hà Nội",
-    "lat": 21.164947,
-    "lng": 105.737954,
-    "rating": 4.5,
-    "hours": "07:00 - 18:00",
-    "price": 0,
-    "tip": "60 phút",
-    "wikiTitle": "Đền_Hai_Bà_Trưng",
-    "tags": [
-      "Di sản nổi bật",
-      "Tâm linh",
-      "Đền/miếu",
-      "Lịch sử",
-      "Miễn phí",
-      "Gia đình"
-    ],
-    "description": "Di tích tưởng niệm Hai Bà Trưng, phù hợp với tuyến tham quan lịch sử ngoại thành Hà Nội."
-  },
-  {
-    "id": "bao-tang-phu-nu",
-    "name": "Bảo tàng Phụ nữ Việt Nam",
-    "category": "Bảo tàng",
-    "address": "36 Lý Thường Kiệt, Hoàn Kiếm, Hà Nội",
-    "lat": 21.020803,
-    "lng": 105.854764,
-    "rating": 4.6,
-    "hours": "08:00 - 17:00",
-    "price": 40000,
-    "tip": "90 phút",
-    "wikiTitle": "Bảo_tàng_Phụ_nữ_Việt_Nam",
-    "tags": [
-      "Di sản nổi bật",
-      "Bảo tàng",
-      "Văn hóa",
-      "Gia đình",
-      "Có vé",
-      "Gần Hồ Gươm"
-    ],
-    "description": "Bảo tàng có nhiều trưng bày sinh động về vai trò, đời sống và văn hóa của phụ nữ Việt Nam."
-  },
-  {
-    "id": "bao-tang-lich-su",
-    "name": "Bảo tàng Lịch sử Quốc gia",
-    "category": "Bảo tàng",
-    "address": "1 Tràng Tiền, Hoàn Kiếm, Hà Nội",
-    "lat": 21.024177,
-    "lng": 105.859209,
-    "rating": 4.4,
-    "hours": "08:00 - 17:00",
-    "price": 40000,
-    "tip": "120 phút",
-    "wikiTitle": "Bảo_tàng_Lịch_sử_quốc_gia",
-    "tags": [
-      "Di sản nổi bật",
-      "Bảo tàng",
-      "Lịch sử",
-      "Văn hóa",
-      "Có vé",
-      "Gần Hồ Gươm"
-    ],
-    "description": "Bảo tàng trưng bày hiện vật lịch sử Việt Nam từ thời tiền sử đến cận hiện đại."
+    id: "bao-tang-lich-su",
+    name: "Bảo tàng Lịch sử Quốc gia",
+    category: "Bảo tàng",
+    address: "1 Tràng Tiền, Hoàn Kiếm, Hà Nội",
+    lat: 21.024177,
+    lng: 105.859209,
+    rating: 4.4,
+    hours: "08:00 - 17:00",
+    price: 40000,
+    tip: "120 phút",
+    wikiTitle: "Bảo_tàng_Lịch_sử_quốc_gia",
+    tags: ["Di sản nổi bật", "Bảo tàng", "Lịch sử", "Văn hóa", "Có vé", "Gần Hồ Gươm"],
+    description: "Bảo tàng trưng bày hiện vật lịch sử Việt Nam từ thời tiền sử đến cận hiện đại."
   }
-
 ];
 
 const filterDefinitions = [
-  {
-    label: "Tất cả",
-    match: () => true
-  },
-  {
-    label: "Di sản nổi bật",
-    match: (place) => place.tags.includes("Di sản nổi bật") || place.rating >= 4.6
-  },
-  {
-    label: "UNESCO",
-    match: (place) => place.tags.includes("UNESCO")
-  },
-  {
-    label: "Lịch sử",
-    match: (place) => place.category === "Lịch sử" || place.tags.includes("Lịch sử")
-  },
-  {
-    label: "Biểu tượng",
-    match: (place) => place.category === "Biểu tượng" || place.tags.includes("Biểu tượng")
-  },
-  {
-    label: "Đền/miếu",
-    match: (place) => place.category === "Đền/miếu" || place.tags.includes("Tâm linh")
-  },
-  {
-    label: "Chùa",
-    match: (place) => place.category === "Chùa" || place.tags.includes("Phật giáo")
-  },
-  {
-    label: "Bảo tàng",
-    match: (place) => place.category === "Bảo tàng" || place.tags.includes("Bảo tàng")
-  },
-  {
-    label: "Miễn phí",
-    match: (place) => place.price === 0 || place.tags.includes("Miễn phí")
-  },
-  {
-    label: "Có vé",
-    match: (place) => place.price > 0 || place.tags.includes("Có vé")
-  },
-  {
-    label: "Gần Hồ Gươm",
-    match: (place) => place.tags.includes("Gần Hồ Gươm") || place.tags.includes("Hồ Gươm")
-  },
-  {
-    label: "Check-in",
-    match: (place) => place.tags.includes("Check-in") || place.tags.includes("Ảnh đẹp")
-  },
-  {
-    label: "Gia đình",
-    match: (place) => place.tags.includes("Gia đình")
-  }
+  { label: "Tất cả", match: () => true },
+  { label: "Di sản nổi bật", match: (place) => place.tags.includes("Di sản nổi bật") || place.rating >= 4.6 },
+  { label: "UNESCO", match: (place) => place.tags.includes("UNESCO") },
+  { label: "Lịch sử", match: (place) => place.category === "Lịch sử" || place.tags.includes("Lịch sử") },
+  { label: "Biểu tượng", match: (place) => place.category === "Biểu tượng" || place.tags.includes("Biểu tượng") },
+  { label: "Đền/miếu", match: (place) => place.category === "Đền/miếu" || place.tags.includes("Tâm linh") },
+  { label: "Chùa", match: (place) => place.category === "Chùa" || place.tags.includes("Phật giáo") },
+  { label: "Bảo tàng", match: (place) => place.category === "Bảo tàng" || place.tags.includes("Bảo tàng") },
+  { label: "Miễn phí", match: (place) => place.price === 0 || place.tags.includes("Miễn phí") },
+  { label: "Có vé", match: (place) => place.price > 0 || place.tags.includes("Có vé") },
+  { label: "Gần Hồ Gươm", match: (place) => place.tags.includes("Gần Hồ Gươm") || place.tags.includes("Hồ Gươm") },
+  { label: "Check-in", match: (place) => place.tags.includes("Check-in") || place.tags.includes("Ảnh đẹp") },
+  { label: "Gia đình", match: (place) => place.tags.includes("Gia đình") }
 ];
 
 function matchesCurrentFilter(place) {
   const filter = filterDefinitions.find((item) => item.label === state.category);
   return filter ? filter.match(place) : true;
 }
-
 
 const vrViewpoints = {
   "hoang-thanh": { lat: 21.035781, lng: 105.840052, heading: 15, pitch: 0, zoom: 0 },
@@ -629,7 +346,6 @@ const vrViewpoints = {
   "bao-tang-dan-toc": { lat: 21.040491, lng: 105.798192, heading: 90, pitch: 0, zoom: 0 },
   "nha-tu-hoa-lo": { lat: 21.025282, lng: 105.846422, heading: 10, pitch: 0, zoom: 0 },
   "lang-bac": { lat: 21.036902, lng: 105.834667, heading: 180, pitch: 0, zoom: 0 },
-
   "chua-tran-quoc": { lat: 21.047933, lng: 105.836676, heading: 220, pitch: 0, zoom: 0 },
   "phu-tay-ho": { lat: 21.058902, lng: 105.826665, heading: 120, pitch: 0, zoom: 0 },
   "den-quan-thanh": { lat: 21.043083, lng: 105.838094, heading: 220, pitch: 0, zoom: 0 },
@@ -641,14 +357,6 @@ const vrViewpoints = {
   "cho-dong-xuan": { lat: 21.038118, lng: 105.849785, heading: 210, pitch: 0, zoom: 0 },
   "cau-long-bien": { lat: 21.040001, lng: 105.856069, heading: 80, pitch: 0, zoom: 0 },
   "ho-tay": { lat: 21.054286, lng: 105.819454, heading: 160, pitch: 0, zoom: 0 },
-
-  "lang-co-duong-lam": { lat: 21.156478, lng: 105.474468, heading: 120, pitch: 0, zoom: 0 },
-  "thanh-co-son-tay": { lat: 21.137335, lng: 105.504671, heading: 90, pitch: 0, zoom: 0 },
-  "chua-thay": { lat: 20.970902, lng: 105.640344, heading: 240, pitch: 0, zoom: 0 },
-  "chua-tay-phuong": { lat: 20.994729, lng: 105.583458, heading: 160, pitch: 0, zoom: 0 },
-  "den-soc": { lat: 21.257635, lng: 105.849607, heading: 210, pitch: 0, zoom: 0 },
-  "co-loa": { lat: 21.115316, lng: 105.872523, heading: 180, pitch: 0, zoom: 0 },
-  "den-hai-ba-trung": { lat: 21.164947, lng: 105.737954, heading: 140, pitch: 0, zoom: 0 },
   "bao-tang-phu-nu": { lat: 21.020803, lng: 105.854764, heading: 260, pitch: 0, zoom: 0 },
   "bao-tang-lich-su": { lat: 21.024177, lng: 105.859209, heading: 230, pitch: 0, zoom: 0 }
 };
@@ -685,7 +393,7 @@ L.control.zoom({ position: "bottomright" }).addTo(map);
 L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
   subdomains: "abcd",
   maxZoom: 19,
-  attribution: "&copy; OpenStreetMap contributors &copy; CARTO"
+  attribution: "© OpenStreetMap contributors © CARTO"
 }).addTo(map);
 
 const defaultIcon = L.divIcon({
@@ -740,7 +448,6 @@ function initCategories() {
   });
 }
 
-
 function renderMarkerPopupContent(place, imageUrl = "") {
   const imageBlock = imageUrl
     ? `<div class="popup-card-image" style="background-image:url('${imageUrl.replace(/'/g, "%27")}')"></div>`
@@ -787,7 +494,6 @@ function renderMarkers() {
 
 async function loadWikiImage(place) {
   if (state.imageCache.has(place.id)) return state.imageCache.get(place.id);
-
   const fallback = "";
   try {
     const url = `https://vi.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(place.wikiTitle)}`;
@@ -804,16 +510,13 @@ async function loadWikiImage(place) {
   }
 }
 
-
 async function loadWikiImages(place, limit = 4) {
   const cacheKey = `${place.id}:gallery`;
   if (state.imageCache.has(cacheKey)) return state.imageCache.get(cacheKey);
 
   const unique = [];
   const addImage = (url) => {
-    if (!url) return;
-    if (url.includes(".svg")) return;
-    if (unique.includes(url)) return;
+    if (!url || url.includes(".svg") || unique.includes(url)) return;
     unique.push(url);
   };
 
@@ -834,7 +537,6 @@ async function loadWikiImages(place, limit = 4) {
     console.warn("Không tải được danh sách ảnh Wikipedia", error);
   }
 
-  // Fallback: dùng ảnh thumbnail từ summary nếu media-list chưa đủ ảnh.
   const summaryImage = await loadWikiImage(place);
   addImage(summaryImage);
 
@@ -905,7 +607,6 @@ function renderGalleryImages(images) {
 
 async function renderPlaceInfoPanel(place) {
   setFeatureTab("map");
-
   const panel = $("#featurePanel");
   panel.classList.add("open");
 
@@ -915,7 +616,6 @@ async function renderPlaceInfoPanel(place) {
   featureBody(`
     <div class="place-info-panel">
       ${renderGalleryLoading()}
-
       <div class="place-info-title-row">
         <div>
           <span class="feature-kicker">${place.category}</span>
@@ -923,20 +623,16 @@ async function renderPlaceInfoPanel(place) {
           <p class="place-info-address">${place.address}</p>
         </div>
       </div>
-
       <div class="feature-card-meta">
         <span class="pill">★ ${place.rating}</span>
         <span class="pill sage">${place.category}</span>
         <span class="pill">🎟 ${currency(place.price)}</span>
       </div>
-
       <div class="place-info-actions">
         <button class="feature-button" id="placePanelDirections">↗ Chỉ đường</button>
         <button class="feature-button secondary" id="placePanelZoom">＋ Phóng tới</button>
       </div>
-
       <div class="place-info-description">${place.description}</div>
-
       <div class="place-stats-grid">
         <div class="place-stat">
           <span>Giờ mở cửa</span>
@@ -1017,29 +713,15 @@ async function selectPlace(place, shouldZoom = true, openMiniPopup = false) {
   renderMarkers();
   renderPlaces();
 
-  // Cập nhật drawer cũ để không lỗi nếu còn code tham chiếu, nhưng không hiển thị drawer nữa.
-  $("#drawerCategory").textContent = place.category;
-  $("#drawerTitle").textContent = place.name;
-  $("#drawerMeta").textContent = `${place.address} · ★ ${place.rating}`;
-  $("#drawerDescription").textContent = place.description;
-  $("#drawerHours").textContent = place.hours;
-  $("#drawerPrice").textContent = currency(place.price);
-  $("#drawerTip").textContent = place.tip;
-  $("#placeDrawer").classList.remove("open");
-
   const marker = state.markers.get(place.id);
-
   if (openMiniPopup && marker) {
     marker.openPopup();
   }
-
   if (shouldZoom) {
     map.flyTo([place.lat, place.lng], 16, { duration: 0.7 });
   }
 
-  // Mở khung thông tin cùng kiểu với AI Guide / Vé / Hướng dẫn viên.
   renderPlaceInfoPanel(place);
-
   if (featureState?.current === "ai") {
     renderAIGuide();
   }
@@ -1052,12 +734,9 @@ function fitVisiblePlaces() {
   map.fitBounds(bounds.pad(0.18), { animate: true });
 }
 
-
 function getStreetViewEmbedUrl(place) {
-  // Dùng tọa độ VR riêng cho từng địa danh để hạn chế việc Street View nhảy ra sai phố.
-  // cbll = điểm Street View ưu tiên; cbp = góc nhìn ban đầu.
   const vr = getVRViewpoint(place);
-  return `https://www.google.com/maps?q=&layer=c&cbll=${vr.lat},${vr.lng}&cbp=11,${vr.heading},${vr.pitch},${vr.zoom},0&output=svembed`;
+  return `https://www.google.com/maps/embed/v1/streetview?key=&location=${vr.lat},${vr.lng}&heading=${vr.heading}&pitch=${vr.pitch}&fov=90`;
 }
 
 function getStreetViewFullUrl(place) {
@@ -1067,18 +746,16 @@ function getStreetViewFullUrl(place) {
 
 function openDirections() {
   if (!state.selectedPlace) return showToast("Hãy chọn một địa điểm trước.");
-  const { lat, lng, name } = state.selectedPlace;
-  const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&destination_place_id=&travelmode=driving`;
+  const { lat, lng } = state.selectedPlace;
+  const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&travelmode=driving`;
   window.open(url, "_blank", "noopener");
 }
-
 
 function openVRPlaceListModal() {
   const box = document.createElement("div");
   box.className = "vr-modal vr-place-modal";
   box.innerHTML = `
     <h2>Chọn địa danh để xem VR 360</h2>
-    
     <div class="vr-modal-place-list">
       ${places.map((place) => `
         <button class="vr-modal-place-item" data-vr-modal-place="${place.id}">
@@ -1129,7 +806,6 @@ function openVRModal() {
 
   template.querySelector("#vrFrame").src = embedUrl;
   template.querySelector("#openStreetView").href = streetViewUrl;
-  template.querySelector("#openStreetView").textContent = "Mở Street View toàn màn hình";
   template.querySelector("#vrCaptionTitle").textContent = place.name;
   template.querySelector("#vrCaptionText").textContent = `${place.description} Điểm xem 360° đã được tối ưu gần vị trí/cổng vào của địa danh.`;
 
@@ -1192,11 +868,9 @@ function locateUser() {
     showToast("Trình duyệt không hỗ trợ định vị.");
     return;
   }
-
   navigator.geolocation.getCurrentPosition(
     (position) => {
       const latlng = [position.coords.latitude, position.coords.longitude];
-
       if (state.userMarker) state.userMarker.remove();
       state.userMarker = L.circleMarker(latlng, {
         radius: 9,
@@ -1250,9 +924,6 @@ $("#btnZoom").addEventListener("click", () => {
 });
 
 $("#btnLocateMap").addEventListener("click", locateUser);
-
-
-$("#closeDrawer").addEventListener("click", () => $("#placeDrawer").classList.remove("open"));
 $("#modalClose").addEventListener("click", closeModal);
 $("#modalBackdrop").addEventListener("click", (event) => {
   if (event.target.id === "modalBackdrop") closeModal();
@@ -1263,7 +934,6 @@ $("#closeSidebar").addEventListener("click", () => $("#sidebar").classList.remov
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeModal();
-    $("#placeDrawer").classList.remove("open");
     $("#sidebar").classList.remove("open");
   }
 });
@@ -1273,11 +943,8 @@ renderPlaces();
 renderMarkers();
 fitVisiblePlaces();
 
-// Chọn sẵn địa điểm đầu tiên để giao diện giống app bản đồ hơn.
 setTimeout(() => selectPlace(places[0], false), 400);
 
-
-// Sửa lỗi bản đồ bị vỡ ô khi trình duyệt render layout chậm hoặc resize cửa sổ.
 window.addEventListener("load", () => {
   setTimeout(() => map.invalidateSize(), 150);
   setTimeout(() => map.invalidateSize(), 700);
@@ -1285,11 +952,6 @@ window.addEventListener("load", () => {
 window.addEventListener("resize", () => {
   setTimeout(() => map.invalidateSize(), 150);
 });
-
-
-// =========================
-// Full old HERIGO features
-// =========================
 
 const guides = [
   {
@@ -1368,17 +1030,6 @@ const guides = [
     icon: "👩‍💻",
     skills: ["UNESCO", "Hoàng thành", "Lịch sử Thăng Long"],
     description: "Chuyên kể chuyện lịch sử theo tuyến Hoàng thành Thăng Long, Văn Miếu và các di tích thời Thăng Long."
-  },
-  {
-    id: "hoang-nam",
-    name: "Hoàng Nam",
-    level: "Giá tốt",
-    status: "Bận",
-    price: 260000,
-    rating: 4.7,
-    icon: "🧑‍🦰",
-    skills: ["Ngoại thành", "Đường Lâm", "Cổ Loa"],
-    description: "Phù hợp các tuyến ngoại thành như Làng cổ Đường Lâm, Thành Cổ Loa, Chùa Thầy và Chùa Tây Phương."
   }
 ];
 
@@ -1393,24 +1044,16 @@ const matchInterests = [
   { id: "deep", label: "Khám phá sâu", places: ["hoang-thanh", "bao-tang-dan-toc", "nha-tu-hoa-lo"] }
 ];
 
-
-const aiPromptGroups = [];
-
-
 function getContextPromptsForPlace(place) {
   if (!place) {
-    return [
-      "Hãy chọn một địa điểm trên bản đồ để xem gợi ý nhanh theo ngữ cảnh."
-    ];
+    return ["Hãy chọn một địa điểm trên bản đồ để xem gợi ý nhanh theo ngữ cảnh."];
   }
-
   const basePrompts = [
     "Địa điểm này có gì nổi bật?",
     "Nên đi cùng điểm nào gần đây?",
     "Có cần mua vé không?",
     "Mất bao lâu để tham quan?"
   ];
-
   const placeName = normalize(place.name);
 
   if (placeName.includes("hoang thanh")) {
@@ -1421,7 +1064,6 @@ function getContextPromptsForPlace(place) {
       "Tham quan Hoàng thành mất bao lâu?"
     ];
   }
-
   if (placeName.includes("van mieu")) {
     return [
       "Văn Miếu - Quốc Tử Giám có gì nổi bật?",
@@ -1430,19 +1072,16 @@ function getContextPromptsForPlace(place) {
       "Tham quan Văn Miếu mất bao lâu?"
     ];
   }
-
   return basePrompts;
 }
 
 function getNearbyPlaces(place, limit = 4) {
   if (!place) return [];
-
   const distanceScore = (other) => {
     const dx = place.lat - other.lat;
     const dy = place.lng - other.lng;
     return Math.sqrt(dx * dx + dy * dy);
   };
-
   return places
     .filter((item) => item.id !== place.id)
     .map((item) => ({ place: item, distance: distanceScore(item) }))
@@ -1457,13 +1096,10 @@ function makePlaceLink(place) {
 
 function linkifyPlaces(text) {
   let output = String(text);
-
-  // Link các token dạng [[place:id|Tên địa danh]]
   output = output.replace(/\[\[place:([^|\]]+)\|([^\]]+)\]\]/g, (_match, id, label) => {
     return `<button type="button" class="ai-place-link" data-ai-place="${id}">${escapeHtml(label)}</button>`;
   });
 
-  // Nếu câu trả lời có nhắc tên địa danh mà chưa dùng token, tự động biến tên địa danh thành nút bấm.
   places
     .slice()
     .sort((a, b) => b.name.length - a.name.length)
@@ -1475,7 +1111,6 @@ function linkifyPlaces(text) {
         return `${prefix}<button type="button" class="ai-place-link" data-ai-place="${place.id}">${escapeHtml(label)}</button>`;
       });
     });
-
   return output;
 }
 
@@ -1490,40 +1125,32 @@ function pickTopPlacesByIntent(intent, limit = 4) {
 
     if (intent === "history") {
       if (place.category === "Lịch sử") score += 5;
-      if (text.includes("lich su") || text.includes("unesco") || text.includes("khao co") || text.includes("lang co")) score += 3;
+      if (text.includes("lich su") || text.includes("unesco") || text.includes("trung bay")) score += 3;
     }
-
     if (intent === "photo") {
       if (text.includes("check-in") || text.includes("anh dep") || text.includes("bieu tuong") || text.includes("kien truc")) score += 5;
       if (place.rating >= 4.5) score += 2;
     }
-
     if (intent === "free") {
       if (place.price === 0) score += 7;
       if (text.includes("mien phi")) score += 2;
     }
-
     if (intent === "museum") {
       if (place.category === "Bảo tàng") score += 7;
       if (text.includes("bao tang") || text.includes("trung bay")) score += 3;
     }
-
     if (intent === "spiritual") {
       if (place.category === "Chùa" || place.category === "Đền/miếu") score += 6;
       if (text.includes("tam linh") || text.includes("phat giao") || text.includes("den") || text.includes("chua")) score += 3;
     }
-
     if (intent === "family") {
       if (text.includes("gia dinh") || place.category === "Bảo tàng") score += 5;
-      if ((Number.parseInt(place.tip, 10) || 60) <= 120) score += 1;
+      if ((parseInt(place.tip) || 60) <= 120) score += 1;
     }
-
     if (intent === "ticket") {
       if (place.price > 0) score += 5;
     }
-
     score += Math.max(0, place.rating - 4) * 1.2;
-
     return { place, score };
   });
 
@@ -1584,8 +1211,7 @@ function buildItinerary(type) {
   };
 
   const route = routes[type] || routes.full;
-  return `${labels[type] || labels.full}:
-` + route.map((place, index) => {
+  return `${labels[type] || labels.full}:\n` + route.map((place, index) => {
     return `${times[type][index] || ""} — ${makePlaceLink(place)}: ${place.description}`;
   }).join("\n");
 }
@@ -1647,13 +1273,11 @@ function openFeature(feature) {
     const panel = $("#featurePanel");
     panel.classList.remove("open");
     panel.classList.remove("vr-center-mode");
-
     if (state.selectedPlace) {
       openVRModal();
     } else {
       openVRPlaceListModal();
     }
-
     return;
   }
 
@@ -1666,7 +1290,6 @@ function openFeature(feature) {
   }
 
   panel.classList.add("open");
-
   const titles = {
     ai: ["AI Guide", "Trợ lý hỏi đáp di sản"],
     tickets: ["Đặt vé", "Chọn vé tham quan"],
@@ -1695,7 +1318,7 @@ function escapeHtml(text) {
     "<": "&lt;",
     ">": "&gt;",
     '"': "&quot;",
-    "'": "&#039;"
+    "'": "&#39;"
   }[char]));
 }
 
@@ -1704,108 +1327,73 @@ function aiAnswer(question) {
   const selected = findPlaceFromQuestion(question) || state.selectedPlace;
 
   if (selected && (q.includes("dia diem nay") || q.includes("co gi noi bat") || q.includes("noi bat") || q.includes("gioi thieu"))) {
-    return `${makePlaceLink(selected)} nổi bật vì: ${selected.description}
-
-Thông tin nhanh: ${selected.category}, ★ ${selected.rating}, giá vé ${currency(selected.price)}, gợi ý tham quan ${selected.tip}.`;
+    return `${makePlaceLink(selected)} nổi bật vì: ${selected.description}\n\nThông tin nhanh: ${selected.category}, ★ ${selected.rating}, giá vé ${currency(selected.price)}, gợi ý tham quan ${selected.tip}.`;
   }
-
   if (selected && (q.includes("di cung") || q.includes("gan day") || q.includes("gan do") || q.includes("ket hop") || q.includes("cung diem"))) {
     const nearby = getNearbyPlaces(selected, 4);
-    return `Bạn có thể kết hợp ${makePlaceLink(selected)} với các điểm gần đây:
-${formatPlaceList(nearby)}`;
+    return `Bạn có thể kết hợp ${makePlaceLink(selected)} với các điểm gần đây:\n${formatPlaceList(nearby)}`;
   }
-
   if (selected && (q.includes("can mua ve") || q.includes("co can mua ve") || q.includes("gia ve") || q.includes("co ve") || q.includes("dat ve"))) {
     if (selected.price > 0) {
       return `${makePlaceLink(selected)} có vé trong demo: ${currency(selected.price)}. Bạn có thể mở tab Vé để chọn số lượng vé.`;
     }
     return `${makePlaceLink(selected)} đang được ghi là miễn phí trong demo, nên không cần mua vé ở phần Vé.`;
   }
-
   if (selected && (q.includes("mat bao lau") || q.includes("bao lau") || q.includes("thoi gian") || q.includes("tham quan mat"))) {
     return `Thời lượng gợi ý khi tham quan ${makePlaceLink(selected)} là khoảng ${selected.tip}. Nếu muốn đi chậm để chụp ảnh/nghe thuyết minh, bạn nên cộng thêm 15-30 phút.`;
   }
-
   if (q.includes("mo cua") || q.includes("gio") || q.includes("may gio")) {
     if (selected) {
       return `${makePlaceLink(selected)} hiện được ghi trong demo là ${selected.hours}. Giá vé: ${currency(selected.price)}. Thời lượng tham quan gợi ý: ${selected.tip}.`;
     }
     return "Bạn hãy chọn hoặc nhắc tên một địa điểm, mình sẽ trả lời giờ mở cửa, giá vé và thời lượng tham quan.";
   }
-
   if (q.includes("gia ve") || q.includes("co ve") || q.includes("dat ve") || q.includes("ve")) {
     const paid = pickTopPlacesByIntent("ticket", 6);
-    return `Các địa điểm có vé trong dữ liệu hiện tại:
-${formatPlaceList(paid)}
-
-Bạn có thể mở tab Vé để chọn số lượng vé.`;
+    return `Các địa điểm có vé trong dữ liệu hiện tại:\n${formatPlaceList(paid)}\n\nBạn có thể mở tab Vé để chọn số lượng vé.`;
   }
-
   if (q.includes("nua ngay") || q.includes("half")) {
     return buildItinerary("halfday");
   }
-
   if (q.includes("1 ngay") || q.includes("mot ngay") || q.includes("ca ngay") || q.includes("lich trinh")) {
     return buildItinerary("full");
   }
-
   if (q.includes("sinh vien") || q.includes("tiet kiem") || q.includes("mien phi") || q.includes("re")) {
-    return `Gợi ý các điểm tiết kiệm/miễn phí:
-${formatPlaceList(pickTopPlacesByIntent("free", 5))}`;
+    return `Gợi ý các điểm tiết kiệm/miễn phí:\n${formatPlaceList(pickTopPlacesByIntent("free", 5))}`;
   }
-
   if (q.includes("gia dinh") || q.includes("tre nho") || q.includes("tre em")) {
-    return `${buildItinerary("family")}
-
-Các điểm này dễ đi, có nội dung văn hóa rõ ràng và phù hợp để tham quan chậm.`;
+    return `${buildItinerary("family")}\n\nCác điểm này dễ đi, có nội dung văn hóa rõ ràng và phù hợp để tham quan chậm.`;
   }
-
-  if (q.includes("lich su") || q.includes("unesco") || q.includes("thang long") || q.includes("co loa")) {
-    return `Nếu bạn thích lịch sử, mình gợi ý:
-${formatPlaceList(pickTopPlacesByIntent("history", 5))}`;
+  if (q.includes("lich su") || q.includes("unesco") || q.includes("thang long")) {
+    return `If bạn thích lịch sử, mình gợi ý:\n${formatPlaceList(pickTopPlacesByIntent("history", 5))}`;
   }
-
   if (q.includes("chup anh") || q.includes("check") || q.includes("song ao") || q.includes("anh dep")) {
-    return `Nếu bạn muốn chụp ảnh đẹp/check-in, nên thử:
-${formatPlaceList(pickTopPlacesByIntent("photo", 5))}`;
+    return `Nếu bạn muốn chụp ảnh đẹp/check-in, nên thử:\n${formatPlaceList(pickTopPlacesByIntent("photo", 5))}`;
   }
-
   if (q.includes("bao tang") || q.includes("trung bay")) {
-    return `Các bảo tàng đáng đi:
-${formatPlaceList(pickTopPlacesByIntent("museum", 5))}`;
+    return `Các bảo tàng đáng đi:\n${formatPlaceList(pickTopPlacesByIntent("museum", 5))}`;
   }
-
-  if (q.includes("tam linh") || q.includes("chua") || q.includes("den") || q.includes("mien")) {
-    return `Các điểm tâm linh phù hợp:
-${formatPlaceList(pickTopPlacesByIntent("spiritual", 5))}`;
+  if (q.includes("tam linh") || q.includes("chua") || q.includes("den")) {
+    return `Các điểm tâm linh phù hợp:\n${formatPlaceList(pickTopPlacesByIntent("spiritual", 5))}`;
   }
-
   if (q.includes("huong dan") || q.includes("guide") || q.includes("tour guide")) {
-    return `Một số hướng dẫn viên phù hợp:
-${recommendGuideForQuestion(question)}
-
-Bạn có thể mở tab Hướng dẫn viên để lọc và đặt guide.`;
+    return `Một số hướng dẫn viên phù hợp:\n${recommendGuideForQuestion(question)}\n\nBạn có thể mở tab Hướng dẫn viên để lọc và đặt guide.`;
   }
-
   if (q.includes("vr") || q.includes("360") || q.includes("street view")) {
     if (selected) {
       return `Bạn có thể bấm nút VR 360 trong panel của ${makePlaceLink(selected)} để xem trực tiếp. Nếu địa điểm không có panorama chính xác, Google có thể hiển thị điểm Street View gần nhất.`;
     }
     return "Bạn hãy chọn một địa điểm trên bản đồ rồi bấm VR 360 trong panel thông tin để xem trực tiếp.";
   }
-
   if (q.includes("chi duong") || q.includes("duong di") || q.includes("google maps")) {
     if (selected) {
       return `Bạn đang chọn ${makePlaceLink(selected)}. Hãy bấm nút Chỉ đường trong panel địa điểm để mở Google Maps đến tọa độ của điểm này.`;
     }
     return "Bạn hãy chọn một địa điểm trước, sau đó bấm Chỉ đường trong panel thông tin.";
   }
-
   if (selected) {
-    return `${makePlaceLink(selected)}: ${selected.description}
-Giờ mở cửa: ${selected.hours}. Giá vé: ${currency(selected.price)}. Gợi ý tham quan: ${selected.tip}.`;
+    return `${makePlaceLink(selected)}: ${selected.description}\nGiờ mở cửa: ${selected.hours}. Giá vé: ${currency(selected.price)}. Gợi ý tham quan: ${selected.tip}.`;
   }
-
   return "Bạn hãy chọn một địa điểm trên bản đồ, AI Guide sẽ hiện các câu hỏi nhanh theo đúng địa điểm đó. Bạn cũng có thể hỏi về giá vé, giờ mở cửa, điểm gần đó, thời lượng tham quan hoặc gợi ý hướng dẫn viên.";
 }
 
@@ -1823,7 +1411,6 @@ function renderAIGuide() {
 
   featureBody(`
     <p class="feature-intro">Chọn một địa điểm trên bản đồ, AI Guide sẽ gợi ý câu hỏi phù hợp với địa điểm đó.</p>
-
     <div class="ai-context-box">
       <strong>${contextTitle}</strong>
       <div class="prompt-row">
@@ -1833,7 +1420,6 @@ function renderAIGuide() {
         }).join("")}
       </div>
     </div>
-
     <div class="ai-window" id="aiWindow">${messages}</div>
     <form class="ai-form" id="aiForm">
       <input id="aiInput" placeholder="Ví dụ: Địa điểm này có gì nổi bật?" autocomplete="off" />
@@ -2035,7 +1621,6 @@ function renderVRHub(selectedId = state.selectedPlace?.id || null) {
       const thumb = $(`#vr-thumb-${place.id}`);
       if (thumb && image) thumb.style.backgroundImage = `url("${image}")`;
     });
-
     return;
   }
 
@@ -2050,7 +1635,6 @@ function renderVRHub(selectedId = state.selectedPlace?.id || null) {
       </select>
       <button class="feature-button secondary" id="vrZoomToPlace">Phóng tới</button>
     </div>
-
     <div class="feature-card vr-live-card">
       <div class="vr-live-head">
         <span class="vr-inline-badge">◉ LIVE 360°</span>
@@ -2063,17 +1647,9 @@ function renderVRHub(selectedId = state.selectedPlace?.id || null) {
           Có thể xoay, kéo, phóng to/thu nhỏ trực tiếp trong khung bên dưới. Nếu điểm này chưa có panorama công khai, Google sẽ hiển thị vị trí Street View gần nhất.
         </p>
       </div>
-
       <div class="vr-live-frame">
-        <iframe
-          src="${embedUrl}"
-          title="VR 360 ${place.name}"
-          loading="lazy"
-          allowfullscreen
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+        <iframe src="${embedUrl}" title="VR 360 ${place.name}" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-
       <div class="vr-live-actions">
         <button class="feature-button secondary" id="vrBackToList">Danh sách địa danh</button>
         <button class="feature-button" id="openVRPopup">Mở popup VR</button>
@@ -2087,17 +1663,14 @@ function renderVRHub(selectedId = state.selectedPlace?.id || null) {
     if (nextPlace) state.selectedPlace = nextPlace;
     renderVRHub(event.target.value);
   });
-
   $("#vrZoomToPlace").addEventListener("click", () => {
     selectPlace(place, true, true);
     showToast(`Đã phóng tới ${place.name}.`);
   });
-
   $("#vrBackToList").addEventListener("click", () => {
     state.selectedPlace = null;
     renderVRHub(null);
   });
-
   $("#openVRPopup").addEventListener("click", () => {
     state.selectedPlace = place;
     openVRModal();
@@ -2129,13 +1702,11 @@ function renderMatch() {
   $("#generateMatch").addEventListener("click", () => {
     $("#matchResult").innerHTML = renderMatchResult(true);
   });
-
   $("#resetMatch").addEventListener("click", () => {
     featureState.selectedInterests.clear();
     renderMatch();
   });
 }
-
 
 function getPlaceArea(place) {
   const text = normalize(`${place.address} ${place.tags.join(" ")}`);
@@ -2143,9 +1714,6 @@ function getPlaceArea(place) {
   if (text.includes("tay ho") || text.includes("ho tay")) return "Hồ Tây";
   if (text.includes("ba dinh")) return "Ba Đình";
   if (text.includes("cau giay")) return "Cầu Giấy";
-  if (text.includes("son tay") || text.includes("duong lam")) return "Sơn Tây";
-  if (text.includes("quoc oai") || text.includes("thach that")) return "Phía Tây Hà Nội";
-  if (text.includes("soc son") || text.includes("dong anh") || text.includes("me linh")) return "Ngoại thành phía Bắc";
   return "Hà Nội";
 }
 
@@ -2156,56 +1724,46 @@ function getInterestScore(place, selectedIds) {
   selectedIds.forEach((id) => {
     if (id === "history") {
       if (place.category === "Lịch sử") score += 6;
-      if (text.includes("lich su") || text.includes("khao co") || text.includes("lang co")) score += 4;
+      if (text.includes("lich su") || text.includes("trung bay")) score += 4;
     }
-
     if (id === "spiritual") {
       if (place.category === "Chùa" || place.category === "Đền/miếu") score += 6;
       if (text.includes("tam linh") || text.includes("phat giao") || text.includes("den") || text.includes("chua")) score += 4;
     }
-
     if (id === "museum") {
       if (place.category === "Bảo tàng") score += 7;
       if (text.includes("bao tang") || text.includes("trung bay")) score += 4;
     }
-
     if (id === "photo") {
       if (text.includes("check-in") || text.includes("anh dep") || text.includes("bieu tuong") || text.includes("kien truc")) score += 5;
       if (place.rating >= 4.5) score += 2;
     }
-
     if (id === "family") {
       if (text.includes("gia dinh") || place.category === "Bảo tàng") score += 5;
-      if (place.tip !== "180 phút") score += 1;
+      score += 1;
     }
-
     if (id === "free") {
       if (place.price === 0) score += 7;
       else if (place.price <= 10000) score += 3;
     }
-
     if (id === "short") {
-      const minutes = Number.parseInt(place.tip, 10) || 60;
+      const minutes = parseInt(place.tip) || 60;
       if (minutes <= 45) score += 6;
       else if (minutes <= 75) score += 3;
     }
-
     if (id === "deep") {
-      const minutes = Number.parseInt(place.tip, 10) || 60;
+      const minutes = parseInt(place.tip) || 60;
       if (minutes >= 90) score += 5;
       if (text.includes("unesco") || text.includes("di san noi bat") || text.includes("van hoa")) score += 3;
     }
   });
 
-  // Ưu tiên nhẹ các điểm chất lượng cao nhưng không để rating áp đảo sở thích.
   score += Math.max(0, place.rating - 4) * 1.5;
-
   return score;
 }
 
 function buildDiverseMatchRoute() {
   const selectedIds = Array.from(featureState.selectedInterests);
-
   const scored = places
     .map((place) => ({
       place,
@@ -2228,19 +1786,11 @@ function buildDiverseMatchRoute() {
     scored.forEach((item, index) => {
       const categoryCount = usedCategories.get(item.place.category) || 0;
       const areaCount = usedAreas.get(item.area) || 0;
-
-      // Phạt nếu chọn quá nhiều điểm cùng loại/khu vực để lịch trình đa dạng hơn.
       let diversityPenalty = categoryCount * 2.6 + areaCount * 1.8;
 
-      // Nếu đã có 2 địa điểm cùng loại, phạt mạnh để ưu tiên loại khác.
       if (categoryCount >= 2) diversityPenalty += 5;
-
-      // Ưu tiên điểm hơi khác khu vực sau 2 điểm đầu, nhưng vẫn giữ logic sở thích.
       const spreadBonus = chosen.length >= 2 && areaCount === 0 ? 1.4 : 0;
-
-      // Ưu tiên một chút cho địa điểm có ảnh/di sản nổi bật.
       const featuredBonus = item.place.tags.includes("Di sản nổi bật") ? 0.8 : 0;
-
       const value = item.baseScore + spreadBonus + featuredBonus - diversityPenalty;
 
       if (value > bestValue) {
@@ -2255,16 +1805,12 @@ function buildDiverseMatchRoute() {
     usedAreas.set(selected.area, (usedAreas.get(selected.area) || 0) + 1);
   }
 
-  // Sắp xếp lịch trình lại cho hợp lý: trung tâm trước, xa hơn sau.
   const areaOrder = {
     "Trung tâm / Hồ Gươm": 1,
     "Ba Đình": 2,
     "Hồ Tây": 3,
     "Cầu Giấy": 4,
-    "Hà Nội": 5,
-    "Phía Tây Hà Nội": 6,
-    "Sơn Tây": 7,
-    "Ngoại thành phía Bắc": 8
+    "Hà Nội": 5
   };
 
   return chosen
@@ -2276,13 +1822,11 @@ function renderMatchResult(force) {
   if (!force) {
     return `<div class="empty-feature">Chưa có lịch trình. Hãy chọn sở thích của bạn.</div>`;
   }
-
   if (featureState.selectedInterests.size < 2) {
     return `<div class="empty-feature">Hãy chọn ít nhất 2 sở thích để HERIGO tạo lịch trình phù hợp hơn.</div>`;
   }
 
   const chosen = buildDiverseMatchRoute();
-
   if (!chosen.length) {
     return `<div class="empty-feature">Chưa tìm được lịch trình phù hợp. Hãy thử chọn thêm sở thích khác.</div>`;
   }
@@ -2342,14 +1886,10 @@ document.querySelectorAll(".feature-tab").forEach((tab) => {
 $("#featureClose")?.addEventListener("click", () => openFeature("map"));
 
 document.addEventListener("click", (event) => {
-
   if (event.target?.dataset?.aiPlace) {
     const place = places.find((item) => item.id === event.target.dataset.aiPlace);
-    if (place) {
-      selectPlace(place, true, true);
-    }
+    if (place) selectPlace(place, true, true);
   }
-
   if (event.target?.dataset?.popupPlace) {
     const place = places.find((item) => item.id === event.target.dataset.popupPlace);
     if (place) selectPlace(place, false, true);
