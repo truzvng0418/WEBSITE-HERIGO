@@ -1612,7 +1612,7 @@ function recommendGuideForQuestion(question) {
 const featureState = {
   current: "map",
   ticketCart: new Map(),
-  guideFilter: "Tất cả hướng dẫn viên",
+  guideFilter: "Tất cả", // Sửa từ "Tất cả hướng dẫn viên" cũ thành "Tất cả" mới
   selectedInterests: new Set(),
   aiMessages: [
     {
@@ -1909,14 +1909,26 @@ function renderTickets() {
 }
 
 function renderGuides() {
-  const filters = ["Tất cả hướng dẫn viên", "đang hoạt động", "hdv chuyên nghiệp", "Giá tốt", "hdv Tại điểm"];
+  // Chuẩn hóa tên các mục lọc chuẩn theo yêu cầu mới của bạn
+  const filters = ["Tất cả", "Đang hoạt động", "HDV chuyên nghiệp", "HDV tại điểm", "Giá tốt"];
+  
+  // Sửa giá trị mặc định ban đầu nếu state đang giữ tên cũ
+  if (!filters.includes(featureState.guideFilter)) {
+    featureState.guideFilter = "Tất cả";
+  }
+
   const filtered = guides.filter((guide) => {
-    if (featureState.guideFilter === "Tất cả hướng dẫn viên") return true;
-    if (featureState.guideFilter === "đang hoạt động") return guide.status === "Đang rảnh";
-    if (featureState.guideFilter === "hdv chuyên nghiệp") return guide.level === "Chuyên gia cao cấp";
+    if (featureState.guideFilter === "Tất cả") return true;
+    if (featureState.guideFilter === "Đang hoạt động") return guide.status === "Đang rảnh";
+    if (featureState.guideFilter === "HDV chuyên nghiệp") return guide.level === "Chuyên gia cao cấp";
     if (featureState.guideFilter === "Giá tốt") return guide.level === "Giá tốt";
-    if (featureState.guideFilter === "hdv Tại điểm") {
-      return guide.skills.includes("Hoàng thành") || guide.skills.includes("Văn Miếu") || guide.skills.includes("Bảo tàng");
+    if (featureState.guideFilter === "HDV tại điểm") {
+      // Quét kỹ năng của HDV gắn cố định tại các điểm di tích lõi, nhà cổ hoặc làng nghề điểm nhấn
+      return guide.skills.includes("Hoàng thành") || 
+             guide.skills.includes("Văn Miếu") || 
+             guide.skills.includes("Bảo tàng") || 
+             guide.skills.includes("Nhà cổ") || 
+             guide.skills.includes("Làng nghề");
     }
     return true;
   });
