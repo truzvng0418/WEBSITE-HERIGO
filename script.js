@@ -343,7 +343,7 @@ const places = [
     hours: "08:00 - 17:00",
     price: 10000,
     tip: "120 phút",
-    wikiTitle: "Thành_Cổ_Loa",
+    wikiTitle: "Cổ_Loa",
     tags: ["Di sản nổi bật", "Lịch sử", "Khảo cổ", "Có vé", "Gia đình", "Di tích quốc gia đặc biệt"],
     description: "Tòa thành ốc cổ đại gắn liền với truyền thuyết nỏ thần An Dương Vương, Mị Châu - Trọng Thủy."
   },
@@ -358,7 +358,7 @@ const places = [
     hours: "07:00 - 18:00",
     price: 0,
     tip: "60 phút",
-    wikiTitle: "Đền_Hai_Bà_Trưng",
+    wikiTitle: "Đền_Hai_Bà_Trưng_(Mê_Linh)",
     tags: ["Tâm linh", "Lịch sử", "Miễn phí", "Gia đình", "Di tích quốc gia đặc biệt"],
     description: "Quần thể đền thờ uy nghiêm tưởng niệm hai vị nữ anh hùng vĩ đại đầu tiên của dân tộc."
   },
@@ -523,7 +523,7 @@ const places = [
     hours: "Cả ngày",
     price: 0,
     tip: "90 phút",
-    wikiTitle: "Lụa_Vạn_Phúc",
+    wikiTitle: "Làng_lụa_Vạn_Phúc",
     tags: ["Làng nghề", "Mua sắm", "Check-in", "Miễn phí"],
     description: "Cái nôi dệt lụa tơ tằm lừng danh Đông Dương, rực rỡ với con đường ô che nắng sắc màu."
   },
@@ -583,7 +583,7 @@ const places = [
     hours: "Cả ngày",
     price: 0,
     tip: "90 phút",
-    wikiTitle: "Phú_Xuyên",
+    wikiTitle: "Làng_Cựu",
     tags: ["Nhà cổ", "Kiến trúc", "Miễn phí"],
     description: "Ngôi làng cổ kính độc đáo mang phong cách kiến trúc kết hợp nửa Pháp thuộc, nửa Á Đông vô cùng lộng lẫy và hoài cổ."
   },
@@ -700,7 +700,7 @@ const vrViewpoints = {
   "lang-cuu": { lat: 20.764122, lng: 105.884219, heading: 60, pitch: 0, zoom: 0 },
   "nha-co-hang-dao": { lat: 21.031981, lng: 105.851941, heading: 30, pitch: 0, zoom: 0 },
   "nha-co-hang-ngang": { lat: 21.033122, lng: 105.851721, heading: 180, pitch: 0, zoom: 0 },
-  "nha-co-hang-mac": { lat: 21.033671, lng: 105.852991, heading: 240, pitch: 0, zoom: 0 }
+  "nha-co-hang-bac": { lat: 21.033671, lng: 105.852991, heading: 240, pitch: 0, zoom: 0 }
 };
 
 function getVRViewpoint(place) {
@@ -1683,11 +1683,11 @@ function featureBody(html) {
 
 function escapeHtml(text) {
   return String(text).replace(/[&<>"']/g, (char) => ({
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;",
-    '"': "&quot;",
-    "'": "&#39;"
+    "&": "&",
+    "<": "<",
+    ">": ">",
+    '"': """,
+    "'": "'"
   }[char]));
 }
 
@@ -1791,7 +1791,7 @@ const experiences = [
   { id: "exp-2", name: "Tour đêm giải mã Hoàng thành - Hoàng thành Thăng Long", price: 300000, desc: "Hành trình giải mã các cổ vật, hiện vật hoàng cung và thưởng thức trà cung đình dưới ánh rằm." },
   { id: "exp-3", name: "Tự làm sản phẩm gốm - Làng gốm Bát tràng", price: 80000, desc: "Trở thành nghệ nhân gốm thực thụ, tự tay nhào nặn và tạo hình sản phẩm trên bàn xoay truyền thống." },
   { id: "exp-4", name: "Workshop sơn mài - Hạ Thái", price: 250000, desc: "Tìm hiểu nghệ thuật sơn mài truyền thống và tự tay trang trí một tác phẩm lưu niệm mang về." },
-  { id: "exp-5", name: "Tour Đêm nhà tù Hỏa lò", price: 399000, desc: "Hành trình tâm linh đầy xúc động, tái hiện chân thực tinh thần bất khuất của các chiến sĩ yêu nước." }
+  { id: "exp-5", name: "Tour Đêm nhà tù Hỏa lò", price: 399000, desc: "Hành trình tâm linh đầy xúc động, tái hiện chân thực tinh thần bất khuất của các chiến sĩ yêu nước." }, // Thêm dấu phẩy hợp chuẩn sửa lỗi crash ở đây
   { id: "exp-6", name: "Workshop Tự tay làm quạt giấy - Làng quạt Chàng Sơn", price: 70000, desc: "Lắng nghe nghệ nhân chia sẻ, tự tay tạo hình, dán nan tre và vẽ họa tiết nghệ thuật lên chiếc quạt giấy dore truyền thống." },
   { id: "exp-7", name: "Trải nghiệm Nhuộm tơ tằm thủ công - Làng lụa Vạn Phúc", price: 150000, desc: "Tham gia vào quy trình nấu sợi, quay tơ và tự tay nhuộm màu tự nhiên cho một tấm lụa nhỏ mang đậm dấu ấn cá nhân." }
 ];
@@ -1915,10 +1915,8 @@ function renderTickets() {
 }
 
 function renderGuides() {
-  // Chuẩn hóa tên các mục lọc chuẩn theo yêu cầu mới của bạn
   const filters = ["Tất cả", "Đang hoạt động", "HDV chuyên nghiệp", "HDV tại điểm", "Giá tốt"];
   
-  // Sửa giá trị mặc định ban đầu nếu state đang giữ tên cũ
   if (!filters.includes(featureState.guideFilter)) {
     featureState.guideFilter = "Tất cả";
   }
@@ -1929,7 +1927,6 @@ function renderGuides() {
     if (featureState.guideFilter === "HDV chuyên nghiệp") return guide.level === "Chuyên gia cao cấp";
     if (featureState.guideFilter === "Giá tốt") return guide.level === "Giá tốt";
     if (featureState.guideFilter === "HDV tại điểm") {
-      // Quét kỹ năng của HDV gắn cố định tại các điểm di tích lõi, nhà cổ hoặc làng nghề điểm nhấn
       return guide.skills.includes("Hoàng thành") || 
              guide.skills.includes("Văn Miếu") || 
              guide.skills.includes("Bảo tàng") || 
@@ -2151,14 +2148,13 @@ function getInterestScore(place, selectedIds) {
       if (place.price === 0) score += 7;
     }
     if (id === "short") {
-      const minutes = parseInt(place.tip) || 60;
+      const minutes = Number.parseInt(place.tip, 10) || 60;
       if (minutes <= 45) score += 6;
     }
     if (id === "deep") {
-      const minutes = parseInt(place.tip) || 60;
+      const minutes = Number.parseInt(place.tip, 10) || 60;
       if (minutes >= 90) score += 5;
     }
-    // 🆕 TÍNH ĐIỂM CHI TIẾT CHO 2 SỞ THÍCH MỚI
     if (id === "craft") {
       if (place.category === "Làng nghề") score += 8;
       if (text.includes("lang nghe") || text.includes("thu cong")) score += 4;
@@ -2176,7 +2172,6 @@ function getInterestScore(place, selectedIds) {
 function buildDiverseMatchRoute() {
   const selectedIds = Array.from(featureState.selectedInterests);
   
-  // Lấy danh sách toàn bộ các địa điểm có điểm số sở thích lớn hơn 0
   let candidates = places
     .map((place) => ({
       place,
@@ -2191,14 +2186,12 @@ function buildDiverseMatchRoute() {
   const usedCategories = new Map();
   const usedAreas = new Map();
 
-  // Mốc 1: Chọn điểm có điểm số cao nhất làm điểm xuất phát lõi
   candidates.sort((a, b) => b.baseScore - a.baseScore);
   const first = candidates.shift();
   chosen.push(first.place);
   usedCategories.set(first.place.category, 1);
   usedAreas.set(first.area, 1);
 
-  // Mốc 2 đến mốc 5: Áp dụng thuật toán gom cụm địa lý (Geo-clustering) và Phạt trùng lặp danh mục
   while (chosen.length < 5 && candidates.length) {
     let bestIndex = -1;
     let bestValue = -Infinity;
@@ -2209,19 +2202,15 @@ function buildDiverseMatchRoute() {
       const categoryCount = usedCategories.get(item.place.category) || 0;
       const areaCount = usedAreas.get(item.area) || 0;
 
-      // 1. Điểm phạt trùng lặp loại di sản quá nhiều (Tránh việc lịch trình chỉ toàn Nhà cổ hoặc toàn Chùa)
       let penalty = categoryCount * 3.0;
 
-      // 2. Điểm tối ưu khoảng cách địa lý (Hạn chế zigzag giữa Nội thành và Ngoại thành xa xôi)
       const dx = lastChosenPlace.lat - item.place.lat;
       const dy = lastChosenPlace.lng - item.place.lng;
       const distance = Math.sqrt(dx * dx + dy * dy);
       
-      // Nếu địa điểm tiếp theo nằm cùng vùng khu vực địa lý hoặc khoảng cách gần, cộng điểm thưởng hành trình mượt mà
       const distanceBonus = distance < 0.1 ? 2.5 : 0;
       const areaBonus = item.area === getPlaceArea(lastChosenPlace) ? 1.5 : 0;
 
-      // Tính toán giá trị tổng hợp cuối cùng
       const value = item.baseScore + distanceBonus + areaBonus - penalty;
 
       if (value > bestValue) {
