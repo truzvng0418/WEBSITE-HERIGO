@@ -1538,10 +1538,21 @@ function renderTickets() {
 }
 
 function renderGuides() {
-  const filters = ["Tất cả hướng dẫn viên", "Đang rảnh", "Chuyên gia cao cấp", "Giá tốt"];
+  // 1. Thay đổi tên các mục lọc trực quan theo ảnh minh họa của bạn
+  const filters = ["Tất cả hướng dẫn viên", "đang hoạt động", "hdv chuyên nghiệp", "Giá tốt", "hdv Tại điểm"];
+  
   const filtered = guides.filter((guide) => {
     if (featureState.guideFilter === "Tất cả hướng dẫn viên") return true;
-    return guide.status === featureState.guideFilter || guide.level === featureState.guideFilter;
+    
+    // Ánh xạ logic lọc chuẩn xác dựa trên tên nhãn mới
+    if (featureState.guideFilter === "đang hoạt động") return guide.status === "Đang rảnh";
+    if (featureState.guideFilter === "hdv chuyên nghiệp") return guide.level === "Chuyên gia cao cấp";
+    if (featureState.guideFilter === "Giá tốt") return guide.level === "Giá tốt";
+    if (featureState.guideFilter === "hdv Tại điểm") {
+      // Ưu tiên các HDV có kỹ năng dẫn cố định tại các di tích lõi
+      return guide.skills.includes("Hoàng thành") || guide.skills.includes("Văn Miếu") || guide.skills.includes("Bảo tàng");
+    }
+    return true;
   });
 
   featureBody(`
@@ -1561,7 +1572,7 @@ function renderGuides() {
           </div>
           <div class="feature-card-meta">
             <span class="pill">★ ${guide.rating}</span>
-            <span class="pill sage">${guide.status}</span>
+            <span class="pill sage">${guide.status === "Đang rảnh" ? "Đang hoạt động" : "Bận"}</span>
             <span class="pill">${guide.level}</span>
             <span class="pill">${currency(guide.price)}/tour</span>
           </div>
