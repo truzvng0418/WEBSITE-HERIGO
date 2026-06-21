@@ -1372,6 +1372,29 @@ const guides = [
     icon: "👩‍💻",
     skills: ["UNESCO", "Hoàng thành", "Lịch sử Thăng Long"],
     description: "Chuyên kể chuyện lịch sử theo tuyến Hoàng thành Thăng Long, Văn Miếu và các di tích thời Thăng Long."
+  },
+  // 🆕 BỔ SUNG 2 HDV PHÙ HỢP VỚI DANH SÁCH ĐỊA DANH MỚI (LÀNG NGHỀ / NHÀ CỔ / NGOẠI THÀNH)
+  {
+    id: "quoc-bao",
+    name: "Bác Quốc Bảo",
+    level: "Chuyên gia cao cấp",
+    status: "Đang rảnh",
+    price: 400000,
+    rating: 4.9,
+    icon: "👨‍🎨",
+    skills: ["Nhà cổ", "Mã Mây", "Thành Cổ Loa", "Kiến trúc cổ"],
+    description: "Cựu kiến trúc sư am hiểu sâu sắc về kết cấu nhà gỗ ba gian, nhà ống cổ và khảo cổ học thành lũy."
+  },
+  {
+    id: "hoai-thanh",
+    name: "Hoài Thanh",
+    level: "Giá tốt",
+    status: "Đang rảnh",
+    price: 230000,
+    rating: 4.8,
+    icon: "👩‍🌾",
+    skills: ["Làng nghề", "Bát Tràng", "Vạn Phúc", "Trải nghiệm"],
+    description: "Chuyên dẫn các tuyến làng nghề thủ công truyền thống, hỗ trợ kết nối workshop tự làm sản phẩm."
   }
 ];
 
