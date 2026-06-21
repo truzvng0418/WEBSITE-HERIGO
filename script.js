@@ -736,7 +736,7 @@ function fitVisiblePlaces() {
 
 function getStreetViewEmbedUrl(place) {
   const vr = getVRViewpoint(place);
-  return `https://www.google.com/maps/embed/v1/streetview?key=&location=${vr.lat},${vr.lng}&heading=${vr.heading}&pitch=${vr.pitch}&fov=90`;
+  return `https://www.google.com/maps?q=${vr.lat},${vr.lng}&layer=c&cbll=${vr.lat},${vr.lng}&cbp=11,${vr.heading},${vr.pitch},0,0&output=svembed`;
 }
 
 function getStreetViewFullUrl(place) {
