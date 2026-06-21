@@ -43,7 +43,7 @@ const places = [
     tip: "45 phút",
     wikiTitle: "Hồ_Hoàn_Kiếm",
     tags: ["Di sản nổi bật", "Biểu tượng", "Đi bộ", "Ảnh đẹp", "Check-in", "Miễn phí", "Gần Hồ Gươm", "Phố cổ Hà Nội"],
-    description: "Không gian trung tâm văn hóa lịch sử của Hà Nội, gắn liền với nhịp sống 36 phố phường cổ kính."
+    description: "Không gian trung tâm văn hóa lịch sử của Hà Nội, gắn liền with nhịp sống 36 phố phường cổ kính."
   },
   {
     id: "den-ngoc-son",
@@ -238,7 +238,7 @@ const places = [
     tip: "30 phút",
     wikiTitle: "Nhà_thờ_Lớn_Hà_Nội",
     tags: ["Di sản nổi bật", "Biểu tượng", "Kiến trúc Pháp", "Check-in", "Miễn phí", "Gần Hồ Gươm"],
-    description: "Nhà thờ lâu đời mang đậm phong cách kiến trúc Gothic phục hưng với những mảng tường rêu phong cổ kính."
+    description: "Nhà thờ lâu đời mang đậm phong cách kiến trúc Gothic phục hưng with những mảng tường rêu phong cổ kính."
   },
   {
     id: "o-quan-chuong",
@@ -801,7 +801,7 @@ function renderMarkerPopupContent(place, imageUrl = "") {
       <strong>${place.name}</strong>
       <div class="popup-card-meta">
         <span class="popup-chip">★ ${place.rating}</span>
-        <span class="popup-chip"> Rhine 🕘 ${place.hours}</span>
+        <span class="popup-chip">🕘 ${place.hours}</span>
       </div>
     </div>
   `;
@@ -1373,7 +1373,6 @@ const guides = [
     skills: ["UNESCO", "Hoàng thành", "Lịch sử Thăng Long"],
     description: "Chuyên kể chuyện lịch sử theo tuyến Hoàng thành Thăng Long, Văn Miếu và các di tích thời Thăng Long."
   },
-  // 🆕 BỔ SUNG 2 HDV PHÙ HỢP VỚI DANH SÁCH ĐỊA DANH MỚI (LÀNG NGHỀ / NHÀ CỔ / NGOẠI THÀNH)
   {
     id: "quoc-bao",
     name: "Bác Quốc Bảo",
@@ -1407,8 +1406,6 @@ const matchInterests = [
   { id: "free", label: "Tiết kiệm", places: ["hoan-kiem", "chua-mot-cot", "lang-bac", "phu-tay-ho"] },
   { id: "short", label: "Đi nhanh", places: ["chua-mot-cot", "den-ngoc-son", "o-quan-chuong", "nha-co-ma-may"] },
   { id: "deep", label: "Khám phá sâu", places: ["hoang-thanh", "van-mieu", "co-loa", "lang-co-duong-lam"] },
-  
-  // 🆕 BỔ SUNG 2 LỰA CHỌN SỞ THÍCH MỚI KHỚP VỚI DANH MỤC DI SẢN MỞ RỘNG
   { id: "craft", label: "Làng nghề", places: ["lang-gom-bat-trang", "lang-lua-van-phuc", "lang-to-he-xuan-la", "lang-non-chuong", "lang-giay-do-buoi"] },
   { id: "old-house", label: "Nhà cổ", places: ["nha-co-ma-may", "lang-co-duong-lam", "lang-cuu", "nha-co-hang-dao", "nha-co-hang-ngang", "nha-co-hang-bac"] }
 ];
@@ -1616,7 +1613,7 @@ function recommendGuideForQuestion(question) {
 const featureState = {
   current: "map",
   ticketCart: new Map(),
-  guideFilter: "Tất cả", // Sửa từ "Tất cả hướng dẫn viên" cũ thành "Tất cả" mới
+  guideFilter: "Tất cả",
   selectedInterests: new Set(),
   aiMessages: [
     {
@@ -1683,11 +1680,11 @@ function featureBody(html) {
 
 function escapeHtml(text) {
   return String(text).replace(/[&<>"']/g, (char) => ({
-    "&": "&",
-    "<": "<",
-    ">": ">",
-    '"': """,
-    "'": "'"
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;"
   }[char]));
 }
 
@@ -1791,7 +1788,7 @@ const experiences = [
   { id: "exp-2", name: "Tour đêm giải mã Hoàng thành - Hoàng thành Thăng Long", price: 300000, desc: "Hành trình giải mã các cổ vật, hiện vật hoàng cung và thưởng thức trà cung đình dưới ánh rằm." },
   { id: "exp-3", name: "Tự làm sản phẩm gốm - Làng gốm Bát tràng", price: 80000, desc: "Trở thành nghệ nhân gốm thực thụ, tự tay nhào nặn và tạo hình sản phẩm trên bàn xoay truyền thống." },
   { id: "exp-4", name: "Workshop sơn mài - Hạ Thái", price: 250000, desc: "Tìm hiểu nghệ thuật sơn mài truyền thống và tự tay trang trí một tác phẩm lưu niệm mang về." },
-  { id: "exp-5", name: "Tour Đêm nhà tù Hỏa lò", price: 399000, desc: "Hành trình tâm linh đầy xúc động, tái hiện chân thực tinh thần bất khuất của các chiến sĩ yêu nước." }, // Thêm dấu phẩy hợp chuẩn sửa lỗi crash ở đây
+  { id: "exp-5", name: "Tour Đêm nhà tù Hỏa lò", price: 399000, desc: "Hành trình tâm linh đầy xúc động, tái hiện chân thực tinh thần bất khuất của các chiến sĩ yêu nước." },
   { id: "exp-6", name: "Workshop Tự tay làm quạt giấy - Làng quạt Chàng Sơn", price: 70000, desc: "Lắng nghe nghệ nhân chia sẻ, tự tay tạo hình, dán nan tre và vẽ họa tiết nghệ thuật lên chiếc quạt giấy dore truyền thống." },
   { id: "exp-7", name: "Trải nghiệm Nhuộm tơ tằm thủ công - Làng lụa Vạn Phúc", price: 150000, desc: "Tham gia vào quy trình nấu sợi, quay tơ và tự tay nhuộm màu tự nhiên cho một tấm lụa nhỏ mang đậm dấu ấn cá nhân." }
 ];
@@ -1808,7 +1805,7 @@ function renderExperiences() {
               <p style="margin: 0; font-size: 13px; color: #6f5848; line-height: 1.45;">${exp.desc}</p>
               <div style="margin-top: 8px;">
                 <span class="pill" style="background: #dfe8dc; color: #27735f; font-weight: 800;">⚡ Đặt ngay</span>
-                <span class="pill" style="font-weight: 800;">💰 ${currency(exp.price)}</span>
+                <span class="pill" style="font-weight: 800;">💰 ${currency(place.price)}</span>
               </div>
             </div>
             <button class="feature-button" data-book-exp="${exp.id}" style="padding: 0 14px; min-height: 36px; font-size: 13px; flex-shrink: 0;">
