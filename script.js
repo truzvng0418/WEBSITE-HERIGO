@@ -1406,7 +1406,11 @@ const matchInterests = [
   { id: "family", label: "Gia đình", places: ["bao-tang-dan-toc", "lang-gom-bat-trang", "lang-to-he-xuan-la", "chua-thay"] },
   { id: "free", label: "Tiết kiệm", places: ["hoan-kiem", "chua-mot-cot", "lang-bac", "phu-tay-ho"] },
   { id: "short", label: "Đi nhanh", places: ["chua-mot-cot", "den-ngoc-son", "o-quan-chuong", "nha-co-ma-may"] },
-  { id: "deep", label: "Khám phá sâu", places: ["hoang-thanh", "van-mieu", "co-loa", "lang-co-duong-lam"] }
+  { id: "deep", label: "Khám phá sâu", places: ["hoang-thanh", "van-mieu", "co-loa", "lang-co-duong-lam"] },
+  
+  // 🆕 BỔ SUNG 2 LỰA CHỌN SỞ THÍCH MỚI KHỚP VỚI DANH MỤC DI SẢN MỞ RỘNG
+  { id: "craft", label: "Làng nghề", places: ["lang-gom-bat-trang", "lang-lua-van-phuc", "lang-to-he-xuan-la", "lang-non-chuong", "lang-giay-do-buoi"] },
+  { id: "old-house", label: "Nhà cổ", places: ["nha-co-ma-may", "lang-co-duong-lam", "lang-cuu", "nha-co-hang-dao", "nha-co-hang-ngang", "nha-co-hang-bac"] }
 ];
 
 function getContextPromptsForPlace(place) {
@@ -2154,6 +2158,15 @@ function getInterestScore(place, selectedIds) {
       const minutes = parseInt(place.tip) || 60;
       if (minutes >= 90) score += 5;
     }
+    // 🆕 TÍNH ĐIỂM CHI TIẾT CHO 2 SỞ THÍCH MỚI
+    if (id === "craft") {
+      if (place.category === "Làng nghề") score += 8;
+      if (text.includes("lang nghe") || text.includes("thu cong")) score += 4;
+    }
+    if (id === "old-house") {
+      if (place.category === "Nhà cổ") score += 8;
+      if (text.includes("nha co") || text.includes("pho co")) score += 4;
+    }
   });
 
   score += Math.max(0, place.rating - 4) * 1.5;
@@ -2162,44 +2175,69 @@ function getInterestScore(place, selectedIds) {
 
 function buildDiverseMatchRoute() {
   const selectedIds = Array.from(featureState.selectedInterests);
-  const scored = places
+  
+  // Lấy danh sách toàn bộ các địa điểm có điểm số sở thích lớn hơn 0
+  let candidates = places
     .map((place) => ({
       place,
       baseScore: getInterestScore(place, selectedIds),
       area: getPlaceArea(place)
     }))
-    .filter((item) => item.baseScore > 0)
-    .sort((a, b) => b.baseScore - a.baseScore);
+    .filter((item) => item.baseScore > 0);
 
-  if (!scored.length) return [];
+  if (!candidates.length) return [];
 
   const chosen = [];
   const usedCategories = new Map();
   const usedAreas = new Map();
 
-  while (chosen.length < 5 && scored.length) {
-    let bestIndex = 0;
-    let bestValue = -Infinity;
+  // Mốc 1: Chọn điểm có điểm số cao nhất làm điểm xuất phát lõi
+  candidates.sort((a, b) => b.baseScore - a.baseScore);
+  const first = candidates.shift();
+  chosen.push(first.place);
+  usedCategories.set(first.place.category, 1);
+  usedAreas.set(first.area, 1);
 
-    scored.forEach((item, index) => {
+  // Mốc 2 đến mốc 5: Áp dụng thuật toán gom cụm địa lý (Geo-clustering) và Phạt trùng lặp danh mục
+  while (chosen.length < 5 && candidates.length) {
+    let bestIndex = -1;
+    let bestValue = -Infinity;
+    const lastChosenPlace = chosen[chosen.length - 1];
+
+    for (let i = 0; i < candidates.length; i++) {
+      const item = candidates[i];
       const categoryCount = usedCategories.get(item.place.category) || 0;
       const areaCount = usedAreas.get(item.area) || 0;
-      let diversityPenalty = categoryCount * 2.6 + areaCount * 1.8;
 
-      if (categoryCount >= 2) diversityPenalty += 5;
-      const spreadBonus = chosen.length >= 2 && areaCount === 0 ? 1.4 : 0;
-      const value = item.baseScore + spreadBonus - diversityPenalty;
+      // 1. Điểm phạt trùng lặp loại di sản quá nhiều (Tránh việc lịch trình chỉ toàn Nhà cổ hoặc toàn Chùa)
+      let penalty = categoryCount * 3.0;
+
+      // 2. Điểm tối ưu khoảng cách địa lý (Hạn chế zigzag giữa Nội thành và Ngoại thành xa xôi)
+      const dx = lastChosenPlace.lat - item.place.lat;
+      const dy = lastChosenPlace.lng - item.place.lng;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      
+      // Nếu địa điểm tiếp theo nằm cùng vùng khu vực địa lý hoặc khoảng cách gần, cộng điểm thưởng hành trình mượt mà
+      const distanceBonus = distance < 0.1 ? 2.5 : 0;
+      const areaBonus = item.area === getPlaceArea(lastChosenPlace) ? 1.5 : 0;
+
+      // Tính toán giá trị tổng hợp cuối cùng
+      const value = item.baseScore + distanceBonus + areaBonus - penalty;
 
       if (value > bestValue) {
         bestValue = value;
-        bestIndex = index;
+        bestIndex = i;
       }
-    });
+    }
 
-    const [selected] = scored.splice(bestIndex, 1);
-    chosen.push(selected);
-    usedCategories.set(selected.place.category, (usedCategories.get(selected.place.category) || 0) + 1);
-    usedAreas.set(selected.area, (usedAreas.get(selected.area) || 0) + 1);
+    if (bestIndex !== -1) {
+      const selected = candidates.splice(bestIndex, 1)[0];
+      chosen.push(selected.place);
+      usedCategories.set(selected.place.category, (usedCategories.get(selected.place.category) || 0) + 1);
+      usedAreas.set(selected.area, (usedAreas.get(selected.area) || 0) + 1);
+    } else {
+      break;
+    }
   }
 
   return chosen;
