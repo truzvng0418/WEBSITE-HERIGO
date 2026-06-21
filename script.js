@@ -1048,6 +1048,53 @@ const matchInterests = [
   { id: "deep", label: "Khám phá sâu", places: ["hoang-thanh", "bao-tang-dan-toc", "nha-tu-hoa-lo"] }
 ];
 
+const experiences = [
+  { id: "exp-1", name: "Tour đêm “Tinh hoa đạo học” - Văn miếu", price: 199000, desc: "Trải nghiệm không gian Văn Miếu lung linh về đêm kết hợp công nghệ trình chiếu 3D Mapping đỉnh cao." },
+  { id: "exp-2", name: "Tour đêm giải mã Hoàng thành - Hoàng thành Thăng Long", price: 300000, desc: "Hành trình giải mã các cổ vật, hiện vật hoàng cung và thưởng thức trà cung đình dưới ánh rằm." },
+  { id: "exp-3", name: "Tự làm sản phẩm gốm - Làng gốm Bát Tràng", price: 80000, desc: "Trở thành nghệ nhân gốm thực thụ, tự tay nhào nặn và tạo hình sản phẩm trên bàn xoay truyền thống." },
+  { id: "exp-4", name: "Workshop sơn mài - Hạ Thái", price: 250000, desc: "Tìm hiểu nghệ thuật sơn mài truyền thống và tự tay trang trí một tác phẩm lưu niệm mang về." },
+  { id: "exp-5", name: "Tour Đêm nhà tù Hỏa Lò", price: 399000, desc: "Hành trình tâm linh đầy xúc động, tái hiện chân thực tinh thần bất khuất của các chiến sĩ yêu nước." }
+];
+
+// Hàm kết xuất (render) giao diện danh sách trải nghiệm
+function renderExperiences() {
+  featureBody(`
+    <p class="feature-intro">Khám phá các hoạt động văn hóa nghệ thuật đặc sắc và đặt lịch tham gia trực tiếp.</p>
+    <div style="display: grid; gap: 12px;">
+      ${experiences.map((exp) => `
+        <div class="feature-card">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 10px;">
+            <div style="flex: 1;">
+              <h3 style="margin: 0 0 6px 0; font-size: 16px; color: #26170f;">${exp.name}</h3>
+              <p style="margin: 0; font-size: 13px; color: #6f5848; line-height: 1.45;">${exp.desc}</p>
+              <div style="margin-top: 8px;">
+                <span class="pill" style="background: #dfe8dc; color: #27735f; font-weight: 800;">⚡ Đặt ngay</span>
+                <span class="pill" style="font-weight: 800;">💰 ${currency(exp.price)}</span>
+              </div>
+            </div>
+            <button class="feature-button" data-book-exp="${exp.id}" style="padding: 0 14px; min-height: 36px; font-size: 13px; flex-shrink: 0;">
+              Đặt chỗ
+            </button>
+          </div>
+        </div>
+      `).join("")}
+    </div>
+  `);
+
+  // Gắn sự kiện lắng nghe nút đặt chỗ trải nghiệm cụ thể
+  document.querySelectorAll("[data-book-exp]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const exp = experiences.find((item) => item.id === button.dataset.bookExp);
+      if (!exp) return;
+      showConfirm(
+        "Xác nhận đặt trải nghiệm",
+        `Bạn đang tạo yêu cầu đăng ký tham gia: "${exp.name}". Tổng chi phí dự kiến: ${currency(exp.price)}.`,
+        () => showToast(`Đã gửi yêu cầu đặt thành công: ${exp.name}`)
+      );
+    });
+  });
+}
+
 function getContextPromptsForPlace(place) {
   if (!place) {
     return ["Hãy chọn một địa điểm trên bản đồ để xem gợi ý nhanh theo ngữ cảnh."];
@@ -1294,8 +1341,11 @@ function openFeature(feature) {
   }
 
   panel.classList.add("open");
+  
+  // Thêm cấu hình tiêu đề cho mục 'experiences' ở đây
   const titles = {
     ai: ["AI Guide", "Trợ lý hỏi đáp di sản"],
+    experiences: ["Trải nghiệm", "Trải nghiệm tại điểm"], // THÊM DÒNG NÀY
     tickets: ["Đặt vé", "Chọn vé tham quan"],
     guides: ["", "Đặt hướng dẫn viên"],
     vr: ["VR 360", "Khám phá không gian ảo"],
@@ -1306,6 +1356,7 @@ function openFeature(feature) {
   $("#featureTitle").textContent = titles[feature][1];
 
   if (feature === "ai") renderAIGuide();
+  if (feature === "experiences") renderExperiences(); // THÊM DÒNG NÀY
   if (feature === "tickets") renderTickets();
   if (feature === "guides") renderGuides();
   if (feature === "vr") renderVRHub();
